@@ -8,20 +8,20 @@ context = "llm-security"
 id = "attack-success"
 term = "attack success"
 aliases = ["attack success rate"]
-definition = "Attack success says how often the attack works."
+definition = "Attack success is the share of attack runs in which the attacker's goal check passes."
 section = "the-office-and-its-assistant"
 example = "attack-rough-baseline"
 
 [[concepts]]
 id = "utility-under-attack"
 term = "utility under attack"
-definition = "Utility under attack says what the attack costs the user."
+definition = "Utility under attack is the share of attack runs in which the benign task carried by the case still passes its check."
 section = "the-office-and-its-assistant"
 
 [[concepts]]
 id = "utility"
 term = "utility"
-definition = "Utility says what the assistant does with no attack at all."
+definition = "Utility is the share of benign task runs whose task check passes."
 section = "the-office-and-its-assistant"
 
 # Chapter 02
@@ -101,7 +101,7 @@ section = "datamarking"
 [[concepts]]
 id = "spotlight-encoding"
 term = "encoding"
-definition = "Encoding replaces each untrusted segment with the base64 encoding of its UTF-8 bytes."
+definition = "Encoding replaces each untrusted segment with an encoded form, here the base64 encoding of its UTF-8 bytes."
 section = "encoding"
 
 # Chapter 05
@@ -110,7 +110,7 @@ section = "encoding"
 id = "input-detector"
 term = "input detector"
 aliases = ["injection detector"]
-definition = "An input detector is a classifier, labelled input (detector) in this book."
+definition = "An input detector, labelled input (detector) in this book, is a classifier that scores how likely a piece of text is to be an injection."
 section = "a-classifier-guard"
 
 # Chapter 06
@@ -128,7 +128,7 @@ context = "ai-agents"
 id = "outbound-allowlist"
 term = "outbound allowlist"
 aliases = ["allowlist"]
-definition = "an outbound allowlist, a rule in the harness that acts on each call before the call runs"
+definition = "an outbound allowlist, a rule in the harness that, before each call runs, refuses a message to a recipient or a page fetch from a host it does not list"
 section = "an-outbound-allowlist"
 
 # Chapter 08
@@ -136,7 +136,7 @@ section = "an-outbound-allowlist"
 [[concepts]]
 id = "dual-llm"
 term = "dual LLM"
-definition = "The dual LLM splits the assistant in two."
+definition = "The dual LLM splits the assistant in two, so that the tool-holding model never reads the untrusted text."
 section = "dual-llm"
 
 [[concepts]]
@@ -160,7 +160,7 @@ part-of = ["dual-llm"]
 [[concepts]]
 id = "plan-then-execute"
 term = "plan-then-execute"
-definition = "Plan-then-execute fixes the plan before the reply is read."
+definition = "Plan-then-execute fixes the plan before any tool result is read."
 section = "plan-then-execute"
 context = "ai-agents"
 
@@ -177,5 +177,5 @@ context = "ai-agents"
 [[concepts]]
 id = "adaptive-attacker"
 term = "adaptive attacker"
-definition = "A real attacker sees what happened and tries again."
+definition = "A real attacker is adaptive: it sees what happened and tries again."
 section = "adaptive-attacker"

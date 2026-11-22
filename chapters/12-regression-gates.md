@@ -48,6 +48,14 @@ The rule has two parts, and each one is a sentence about a bound.
 
 The ceiling is the defended run's upper bound, with one more of its held cases counted as a success, rounded up to a whole point. On dev the defended run reads {{out:gate-thresholds:dev attack success, defended}}. With one more case counted as a success, its upper bound is {{out:gate-thresholds:dev attack success, upper bound with one more case}}, so the stored ceiling is {{out:gate-catches-a-regression:ceiling, stored}}. The extra case is the noise allowance. Without it, a gate would fail on one case of noise alone.
 
+Reading the bound instead of the rate puts the pass line at a smaller count of successes. {{fig:gate-boundary}} draws the low counts of the sweep from [the gate section](#the-gate), in which the first cases in ID order succeed. The lower line is the observed rate, the upper line is the upper bound the check reads, and the dashed line is the stored ceiling. The dotted line marks the largest count that passes.
+
+![In the sweep, the upper bound of attack success crosses the stored ceiling at a smaller count of successes than the observed rate does](../examples/figures/gate-boundary.svg "The observed rate and its interval's upper bound as the first dev cases in ID order succeed, with the stored ceiling and the pass line")
+
+[Example: figure-gate-boundary](../examples/figure-gate-boundary.py)
+
+The bound is {{out:figure-gate-boundary:upper bound at the largest passing count}} at the largest count that passes, under the ceiling, and {{out:figure-gate-boundary:upper bound at the smallest failing count}} at the smallest count that fails. The rate alone first reaches the ceiling at {{out:figure-gate-boundary:count at which the rate alone reaches the ceiling}} successes.
+
 The floor is the lower bound of the paired utility difference, defended minus baseline, rounded down to a step of five points. On dev that lower bound is {{out:gate-thresholds:dev utility difference, lower bound}}, so the stored floor is {{out:gate-catches-a-regression:floor, stored}}.
 
 The floor is strict, and the book chose it on purpose. The benign set has {{out:gate-thresholds:benign tasks compared}} tasks on dev. A run that loses one benign task has a paired difference of one task lost, and the bootstrap's lower bound then falls under zero, so the gate fails it. A floor of zero therefore means that any lost benign task fails the gate on dev, and a defence that costs utility will fail here. A team that accepts some lost utility for a larger gain in safety may loosen the floor. The place to do that is the rule in the gate's code, applied on dev, with the new value stored and the reason written next to it. It is never done by looking at held-out first.

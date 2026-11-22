@@ -18,6 +18,9 @@ say = "The code finds the dev benign tasks whose check needs a side-effecting ca
 [examples.prompt-small-model]
 say = "The code runs the undefended 0.6B model on the dev split and sets its utility and attack success beside the 4B model's. It also counts, for each model, the counted attack cases in which the model never called the tool that returns the injected text. Read the two carrier counts last. The 0.6B model never called that tool in {{out:prompt-small-model:never read the carrier, 0.6B}} counted cases. The tool-description cases are left out of both counts, and there are {{out:prompt-small-model:tool-description cases left out}} of them."
 
+[examples.figure-prompt-defence-tradeoff]
+say = "The code replays the undefended run and the five defences on the dev split, and draws each run's dev attack success against its dev utility, with a 95% interval in both directions. It prints each run's two rates with their counts and intervals, and checks that the warning's point is the baseline's. Read the encoding point first: it stops every attack, at {{out:figure-prompt-defence-tradeoff:prompt-encode, attack success, 60 dev cases}}, and keeps {{out:figure-prompt-defence-tradeoff:prompt-encode, utility, 15 dev benign tasks}} of the benign tasks."
+
 [terms]
 "0.6B" = "zero point six B"
 "4B" = "four B"

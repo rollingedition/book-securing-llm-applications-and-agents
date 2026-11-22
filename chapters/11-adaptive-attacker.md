@@ -6,7 +6,7 @@ chapter_id: adaptive-attacker
 
 By the end of this chapter you can run an attacker that revises its injection after each try, against a defence, under a fixed budget. You can read the result round by round, compare it with the fixed set, and say what the result does and does not show. You will also see which controls in this book this attacker did not touch, and why a toolkit's static probes cannot replace the loop.
 
-Every defence in chapters 4 to 10 was measured against injections written before the run. Each case in the attack set is a fixed string, and the assistant either followed it or did not. A real attacker sees what happened and tries again. This chapter asks whether a small attacker that does that finds anything the fixed set missed on the office assistant.
+Every defence in chapters 4 to 10 was measured against injections written before the run. Each case in the attack set is a fixed string, and the assistant either followed it or did not. A real attacker is adaptive: it sees what happened and tries again. This chapter asks whether a small attacker that does that finds anything the fixed set missed on the office assistant.
 
 On this set it found nothing the fixed set had not already found. The rest of the chapter explains why that is weak evidence.
 
