@@ -369,24 +369,24 @@ L 457.79976 153.198979
    </g>
    <g id="legend_1">
     <g id="line2d_33">
-     <path d="M 185.40601 16.098678 
-L 195.40601 16.098678 
-L 205.40601 16.098678 
+     <path d="M 173.660697 16.098678 
+L 183.660697 16.098678 
+L 193.660697 16.098678 
 " style="fill: none; stroke: #9a4a06; stroke-width: 1.4; stroke-linecap: square"/>
      <g>
-      <use xlink:href="#ma8ee800dea" x="195.40601" y="16.098678" style="fill: #9a4a06; stroke: #9a4a06"/>
+      <use xlink:href="#ma8ee800dea" x="183.660697" y="16.098678" style="fill: #9a4a06; stroke: #9a4a06"/>
      </g>
     </g>
     <g id="text_18">
-     <text style="font-size: 10px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #1b1712" x="213.40601" y="19.598678" transform="rotate(-0 213.40601 19.598678)">95% bootstrap interval, half the cases succeed</text>
+     <text style="font-size: 10px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #1b1712" x="201.660697" y="19.598678" transform="rotate(-0 201.660697 19.598678)">width of the 95% interval, half the cases succeed</text>
     </g>
     <g id="line2d_34">
      <g>
-      <use xlink:href="#m1127c3a91e" x="195.40601" y="31.099459" style="fill-opacity: 0; stroke: #61574a"/>
+      <use xlink:href="#m1127c3a91e" x="183.660697" y="31.099459" style="fill-opacity: 0; stroke: #61574a"/>
      </g>
     </g>
     <g id="text_19">
-     <text style="font-size: 10px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #1b1712" x="213.40601" y="34.599459" transform="rotate(-0 213.40601 34.599459)">20, 60, 100 and 200 cases</text>
+     <text style="font-size: 10px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #1b1712" x="201.660697" y="34.599459" transform="rotate(-0 201.660697 34.599459)">20, 60, 100 and 200 cases</text>
     </g>
    </g>
   </g>

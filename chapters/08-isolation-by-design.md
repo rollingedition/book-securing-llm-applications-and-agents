@@ -141,6 +141,14 @@ Each design buys a lower attack success by giving up something the assistant use
 
 The paired differences are computed per item, then bootstrapped, as [Evaluating LLM Applications, chapter 8](https://rollingedition.com/evaluating-llm-applications/s/paired-comparisons) describes.
 
+{{fig:isolation-tradeoff}} draws each dev run with its 95% intervals. The dual LLM sits highest of the designs, at {{out:figure-isolation-tradeoff:utility, design-dual-llm, 15 benign tasks}} utility; plan-then-execute and taint fall to {{out:figure-isolation-tradeoff:utility, design-plan-then-execute, 15 benign tasks}} and {{out:figure-isolation-tradeoff:utility, design-taint, 15 benign tasks}}.
+
+![Each design sits left of the undefended run, and the dual LLM is highest of them](../examples/figures/isolation-tradeoff.svg "Attack success against utility on dev, with 95% intervals")
+
+[Example: figure-isolation-tradeoff](../examples/figure-isolation-tradeoff.py)
+
+Each design's attack interval overlaps the undefended run's.
+
 The utility differences on dev are {{out:isolation-paired:utility difference from baseline, design-dual-llm}} for the dual LLM, {{out:isolation-paired:utility difference from baseline, design-plan-then-execute}} for plan-then-execute and {{out:isolation-paired:utility difference from baseline, design-taint}} for taint.
 
 The intervals for the dual LLM and for taint are {{out:isolation-paired:utility difference from baseline, design-dual-llm, interval}} and {{out:isolation-paired:utility difference from baseline, design-taint, interval}}. On held-out, the dual LLM's point estimate is above zero, and taint's interval is {{out:isolation-paired:held-out utility difference from baseline, design-taint, interval}}.

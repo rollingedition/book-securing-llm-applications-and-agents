@@ -114,6 +114,14 @@ The token cost does not rank the defences the way the utility cost does. In this
 
 These counts describe these prompts, this tokeniser and this set of short documents. Real tool results are longer, and a deployed model's tokeniser may split the same text differently. Count the tokens with the tokeniser of the model you deploy, on the prompts it will read, and not with the numbers printed here.
 
+{{fig:prompt-defence-tradeoff}} draws each run's attack success along the bottom and its utility up the side, so a defence that lowers attack success without costing utility sits toward the upper left. The undefended run, the baseline, is at {{out:figure-prompt-defence-tradeoff:baseline, attack success, 60 dev cases}} attack success and {{out:figure-prompt-defence-tradeoff:baseline, utility, 15 dev benign tasks}} utility. The warning's point is on top of it, since the two runs have the same counts.
+
+![Datamarking and encoding lower attack success most, and encoding and repeating the request give up the most utility](../examples/figures/prompt-defence-tradeoff.svg "Each run's dev attack success against its dev utility, with 95% bootstrap intervals")
+
+[Example: figure-prompt-defence-tradeoff](../examples/figure-prompt-defence-tradeoff.py)
+
+Datamarking brings attack success down to {{out:figure-prompt-defence-tradeoff:prompt-datamark, attack success, 60 dev cases}}, and its utility is {{out:figure-prompt-defence-tradeoff:prompt-datamark, utility, 15 dev benign tasks}}. Encoding reaches {{out:figure-prompt-defence-tradeoff:prompt-encode, attack success, 60 dev cases}} attack success, but its utility falls to {{out:figure-prompt-defence-tradeoff:prompt-encode, utility, 15 dev benign tasks}}. Repeating the request costs the most utility, at {{out:figure-prompt-defence-tradeoff:prompt-repeat, utility, 15 dev benign tasks}}, and its attack success is {{out:figure-prompt-defence-tradeoff:prompt-repeat, attack success, 60 dev cases}}. Delimiters sit just left of the baseline, at {{out:figure-prompt-defence-tradeoff:prompt-delimiters, attack success, 60 dev cases}} attack success and {{out:figure-prompt-defence-tradeoff:prompt-delimiters, utility, 15 dev benign tasks}} utility. With 15 tasks the bars are wide: the repeat's utility interval is {{out:figure-prompt-defence-tradeoff:prompt-repeat, utility, 15 dev benign tasks, interval}}.
+
 **Working rule:** Count each defence's tokens with the deployed model's tokeniser, on the prompts it will read, and count the calls its run makes. Put each cost beside its benign and attack results. If two defences lower attack success by the same amount, keep the one that costs fewer benign tasks and fewer tokens.
 
 ## A smaller model {#a-smaller-model}

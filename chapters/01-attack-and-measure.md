@@ -66,6 +66,12 @@ The interval covers one thing: the spread that comes from which cases happened t
 
 Ten successes in twenty cases gives an interval {{out:attack-interval-width:interval width, 10 of 20}} wide. The same rate on a hundred cases gives {{out:attack-interval-width:interval width, 50 of 100}}, and on two hundred cases, {{out:attack-interval-width:interval width, 100 of 200}}. A set of twenty is small, and an interval that wide can hide a large difference between two defences. That is why this chapter calls its intervals rough.
 
+![The interval is widest on few cases, and it narrows fast at first and then slowly](../examples/figures/interval-width.svg "How wide the 95% interval is for a rate of one half, from 10 to 200 cases")
+
+[Example: figure-interval-width](../examples/figure-interval-width.py)
+
+{{fig:interval-width}} draws that width for a rate of one half, at every set size from 10 to 200 cases in steps of ten. The line is the width of the 95% interval, and the open circles mark 20, 60, 100 and 200 cases. Forty more cases take the width from {{out:figure-interval-width:interval width at half success, 20 cases}} at 20 cases to {{out:figure-interval-width:interval width at half success, 60 cases}} at 60. The next hundred and forty take it only to {{out:figure-interval-width:interval width at half success, 200 cases}} at 200, by way of {{out:figure-interval-width:interval width at half success, 100 cases}} at 100.
+
 The intervals are only as good as the scorer under them. A scorer that reads the wrong field undercounts, and the bootstrap then reports that undercount with the same care it gives a right one. That is why each scorer is short, and why the example prints counts a reader can check by hand: an odd count is the first place to look. The check is not a substitute for reading the scorer.
 
 **Working rule:** Report every rate with its count beside its interval, and call an interval rough when the set holds few cases. Twenty is few.

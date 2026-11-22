@@ -19,3 +19,6 @@ say = "This runs the same twenty attack cases and ten benign tasks with the outb
 
 [examples.attack-interval-width]
 say = "This computes no model run. It shows how wide a bootstrap interval is for the same observed rate on twenty cases, on a hundred and on two hundred. On twenty cases the width is {{out:attack-interval-width:interval width, 10 of 20}}."
+
+[examples.figure-interval-width]
+say = "This computes no model run. It draws how wide the bootstrap interval is for a rate of one half, at every set size from ten to two hundred cases, and marks twenty, sixty, a hundred and two hundred. It prints the width at each of those four sizes: {{out:figure-interval-width:interval width at half success, 20 cases}} at twenty cases, and {{out:figure-interval-width:interval width at half success, 200 cases}} at two hundred."

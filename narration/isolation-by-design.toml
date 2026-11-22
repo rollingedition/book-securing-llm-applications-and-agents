@@ -22,6 +22,9 @@
 [examples.isolation-paired]
 say = "This replays the recorded runs of the undefended assistant and of each of the three designs on the same benign tasks and attack cases, on both splits, and pairs each design with the undefended run. For the dual LLM on dev, utility is {{out:isolation-paired:utility, design-dual-llm, 15 benign tasks}} and attack success is {{out:isolation-paired:attack success, design-dual-llm, 60 cases}}."
 
+[examples.figure-isolation-tradeoff]
+say = "This replays the dev runs of the undefended assistant and of each design, and plots each run as one point: attack success along one axis, utility along the other, each with a 95% bootstrap interval in both directions. For the dual LLM, utility is {{out:figure-isolation-tradeoff:utility, design-dual-llm, 15 benign tasks}} and attack success is {{out:figure-isolation-tradeoff:attack success, design-dual-llm, 60 cases}}."
+
 [examples.isolation-cost]
 say = "This reads the traces of the benign tasks each design lost and counts what caused each loss: refused calls, questions to the quarantined model, and the number of calls in each first reply. On dev the taint check refused {{out:isolation-cost:benign tasks refused, design-taint}} benign tasks, and the first replies of the plan-then-execute planner held more than one call in {{out:isolation-cost:first replies holding more than one call, design-plan-then-execute}} benign tasks."
 
