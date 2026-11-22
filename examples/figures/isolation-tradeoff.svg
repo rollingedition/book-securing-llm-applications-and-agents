@@ -316,31 +316,41 @@ L -2 -0
    <g id="LineCollection_5">
     <path d="M 43.088521 197.198985 
 L 90.358062 197.198985 
-" clip-path="url(#pac5da8e021)" style="fill: none; stroke: #9a4a06"/>
+" clip-path="url(#pac5da8e021)" style="fill: none; stroke: #61574a"/>
    </g>
    <g id="LineCollection_6">
     <path d="M 63.346896 210.798979 
 L 63.346896 169.998997 
-" clip-path="url(#pac5da8e021)" style="fill: none; stroke: #9a4a06"/>
+" clip-path="url(#pac5da8e021)" style="fill: none; stroke: #61574a"/>
    </g>
    <g id="line2d_33">
+    <defs>
+     <path id="m165b31a839" d="M 0 2 
+L 0 -2 
+" style="stroke: #61574a"/>
+    </defs>
     <g clip-path="url(#pac5da8e021)">
-     <use xlink:href="#m934b34b3d7" x="43.088521" y="197.198985" style="fill: #9a4a06; stroke: #9a4a06"/>
+     <use xlink:href="#m165b31a839" x="43.088521" y="197.198985" style="fill: #61574a; stroke: #61574a"/>
     </g>
    </g>
    <g id="line2d_34">
     <g clip-path="url(#pac5da8e021)">
-     <use xlink:href="#m934b34b3d7" x="90.358062" y="197.198985" style="fill: #9a4a06; stroke: #9a4a06"/>
+     <use xlink:href="#m165b31a839" x="90.358062" y="197.198985" style="fill: #61574a; stroke: #61574a"/>
     </g>
    </g>
    <g id="line2d_35">
+    <defs>
+     <path id="md196389ee1" d="M 2 0 
+L -2 -0 
+" style="stroke: #61574a"/>
+    </defs>
     <g clip-path="url(#pac5da8e021)">
-     <use xlink:href="#m4341cb4736" x="63.346896" y="210.798979" style="fill: #9a4a06; stroke: #9a4a06"/>
+     <use xlink:href="#md196389ee1" x="63.346896" y="210.798979" style="fill: #61574a; stroke: #61574a"/>
     </g>
    </g>
    <g id="line2d_36">
     <g clip-path="url(#pac5da8e021)">
-     <use xlink:href="#m4341cb4736" x="63.346896" y="169.998997" style="fill: #9a4a06; stroke: #9a4a06"/>
+     <use xlink:href="#md196389ee1" x="63.346896" y="169.998997" style="fill: #61574a; stroke: #61574a"/>
     </g>
    </g>
    <g id="LineCollection_7">
@@ -410,8 +420,21 @@ z
     </g>
    </g>
    <g id="line2d_43">
+    <defs>
+     <path id="m2f4553f8e1" d="M 0 2 
+C 0.530406 2 1.03916 1.789267 1.414214 1.414214 
+C 1.789267 1.03916 2 0.530406 2 0 
+C 2 -0.530406 1.789267 -1.03916 1.414214 -1.414214 
+C 1.03916 -1.789267 0.530406 -2 0 -2 
+C -0.530406 -2 -1.03916 -1.789267 -1.414214 -1.414214 
+C -1.789267 -1.03916 -2 -0.530406 -2 0 
+C -2 0.530406 -1.789267 1.03916 -1.414214 1.414214 
+C -1.03916 1.789267 -0.530406 2 0 2 
+z
+" style="stroke: #61574a"/>
+    </defs>
     <g clip-path="url(#pac5da8e021)">
-     <use xlink:href="#mfdf42890e8" x="63.346896" y="197.198985" style="fill: #9a4a06; stroke: #9a4a06"/>
+     <use xlink:href="#m2f4553f8e1" x="63.346896" y="197.198985" style="fill: #61574a; stroke: #61574a"/>
     </g>
    </g>
    <g id="line2d_44">
@@ -430,16 +453,16 @@ L 448.25601 210.798979
 " style="fill: none; stroke: #61574a; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
    </g>
    <g id="text_15">
-    <text style="font-size: 10px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #1b1712" x="128.358062" y="22.997109" transform="rotate(-0 128.358062 22.997109)">baseline</text>
+    <text style="font-size: 10px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #1b1712" x="128.358062" y="22.997109" transform="rotate(-0 128.358062 22.997109)">undefended</text>
    </g>
    <g id="text_16">
-    <text style="font-size: 10px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #9a4a06" x="60.594104" y="63.197488" transform="rotate(-0 60.594104 63.197488)">design-dual-llm</text>
+    <text style="font-size: 10px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #9a4a06" x="60.594104" y="63.197488" transform="rotate(-0 60.594104 63.197488)">dual LLM</text>
    </g>
    <g id="text_17">
-    <text style="font-size: 10px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #9a4a06" x="93.346896" y="199.797032" transform="rotate(-0 93.346896 199.797032)">design-plan-then-execute</text>
+    <text style="font-size: 10px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #61574a" x="93.346896" y="199.797032" transform="rotate(-0 93.346896 199.797032)">plan-then-execute</text>
    </g>
    <g id="text_18">
-    <text style="font-size: 10px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #9a4a06" x="106.852479" y="158.997049" transform="rotate(-0 106.852479 158.997049)">design-taint</text>
+    <text style="font-size: 10px; font-family: 'IBM Plex Sans', 'DejaVu Sans', sans-serif; text-anchor: start; fill: #9a4a06" x="106.852479" y="158.997049" transform="rotate(-0 106.852479 158.997049)">taint labels</text>
    </g>
   </g>
  </g>
