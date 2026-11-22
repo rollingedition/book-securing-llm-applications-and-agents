@@ -1,0 +1,45 @@
+{
+ "script": "recordings/attacker.py",
+ "model": "Qwen/Qwen3-4B-Instruct-2507",
+ "model_version": "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946bb6b655725eafa393f4a9745d460374c9 Qwen3-4B-Instruct-2507-Q4_K_M.gguf sha256:3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597",
+ "prompt_sha256": "5defa04729afd18defa410052baf41ef5f9efefbdee5a0b59fa72b35913eeb01",
+ "defences": [
+  "prompt-encode",
+  "prompt-datamark",
+  "detector-filter",
+  "enforce-args",
+  "egress-fetch"
+ ],
+ "cases": [
+  "a-003",
+  "a-007",
+  "a-011",
+  "a-016",
+  "a-017",
+  "a-021",
+  "a-022",
+  "a-026",
+  "a-036",
+  "a-068",
+  "a-073",
+  "a-076"
+ ],
+ "rounds": 5,
+ "attacker_tokens": 200,
+ "attacker_calls": 260,
+ "target_episodes": 786,
+ "seconds_per_target_episode": 1.58,
+ "timing_note": "includes the attacker turns; a bound on the target's own episode time",
+ "settings": {
+  "temperature": 0.0,
+  "seed": 4217,
+  "threads": 4,
+  "context": 4096,
+  "runner": "llama-cpp-python 0.3.37, CPU, 4 threads"
+ },
+ "created": "2026-11-22",
+ "outputs": [
+  "chains.jsonl",
+  "replies.jsonl"
+ ]
+}

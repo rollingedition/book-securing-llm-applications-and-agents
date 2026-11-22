@@ -1,0 +1,181 @@
+# The terms this book defines, each quoted from the sentence that defines it (writing standards W-77 to W-80).
+
+context = "llm-security"
+
+# Chapter 01
+
+[[concepts]]
+id = "attack-success"
+term = "attack success"
+aliases = ["attack success rate"]
+definition = "Attack success says how often the attack works."
+section = "the-office-and-its-assistant"
+example = "attack-rough-baseline"
+
+[[concepts]]
+id = "utility-under-attack"
+term = "utility under attack"
+definition = "Utility under attack says what the attack costs the user."
+section = "the-office-and-its-assistant"
+
+[[concepts]]
+id = "utility"
+term = "utility"
+definition = "Utility says what the assistant does with no attack at all."
+section = "the-office-and-its-assistant"
+
+# Chapter 02
+
+[[concepts]]
+id = "asset"
+term = "asset"
+definition = "An asset is anything the office would lose, or anything an attacker would want: a record, a secret, or the ability to act for the office."
+section = "assets-and-trust"
+context = "security"
+
+[[concepts]]
+id = "hidden-context"
+term = "hidden context"
+definition = "the hidden context in the system prompt, which holds the office's internal bank-reconciliation note and a portal key"
+section = "assets-and-trust"
+
+[[concepts]]
+id = "lethal-trifecta"
+term = "lethal trifecta"
+definition = "It has three legs: access to private data, exposure to untrusted content, and a way to communicate externally."
+section = "the-trifecta-and-the-rule-of-two"
+example = "threat-trifecta-check"
+
+[[concepts]]
+id = "rule-of-two"
+term = "Rule of Two"
+aliases = ["Agents Rule of Two"]
+definition = "an agent session should combine no more than two of three properties: processing untrustworthy inputs, reaching sensitive systems or private data, and changing state or communicating externally"
+section = "the-trifecta-and-the-rule-of-two"
+context = "ai-agents"
+
+# Chapter 03
+
+[[concepts]]
+id = "attack-goal"
+term = "goal"
+aliases = ["attack goal"]
+definition = "The goal is what the injected text asks the assistant to do."
+section = "goals-locations-styles"
+
+[[concepts]]
+id = "attack-location"
+term = "location"
+definition = "The location is where the injected text sits."
+section = "goals-locations-styles"
+
+[[concepts]]
+id = "attack-style"
+term = "style"
+definition = "The style is how the text is written"
+section = "goals-locations-styles"
+
+# Chapter 04
+
+[[concepts]]
+id = "spotlighting"
+term = "spotlighting"
+definition = "Spotlighting is the name Hines et al. give to transforms of untrusted text that give the model a signal of where the text came from."
+section = "delimiters-and-spotlighting"
+
+[concepts.relations]
+narrower = ["delimiters", "datamarking", "spotlight-encoding"]
+
+[[concepts]]
+id = "delimiters"
+term = "delimiters"
+definition = "Delimiters wrap each untrusted segment in markers, and the system prompt says what the markers mean."
+section = "delimiters-alone"
+
+[[concepts]]
+id = "datamarking"
+term = "datamarking"
+definition = "Datamarking replaces every whitespace character in the untrusted text with a marker character, and the system prompt names the marker."
+section = "datamarking"
+
+[[concepts]]
+id = "spotlight-encoding"
+term = "encoding"
+definition = "Encoding replaces each untrusted segment with the base64 encoding of its UTF-8 bytes."
+section = "encoding"
+
+# Chapter 05
+
+[[concepts]]
+id = "input-detector"
+term = "input detector"
+aliases = ["injection detector"]
+definition = "An input detector is a classifier, labelled input (detector) in this book."
+section = "a-classifier-guard"
+
+# Chapter 06
+
+[[concepts]]
+id = "argument-policy"
+term = "argument policy"
+definition = "The argument policy adds a check on each call's arguments."
+section = "argument-policies"
+context = "ai-agents"
+
+# Chapter 07
+
+[[concepts]]
+id = "outbound-allowlist"
+term = "outbound allowlist"
+aliases = ["allowlist"]
+definition = "an outbound allowlist, a rule in the harness that acts on each call before the call runs"
+section = "an-outbound-allowlist"
+
+# Chapter 08
+
+[[concepts]]
+id = "dual-llm"
+term = "dual LLM"
+definition = "The dual LLM splits the assistant in two."
+section = "dual-llm"
+
+[[concepts]]
+id = "privileged-model"
+term = "privileged model"
+definition = "A privileged model holds the tools and never reads the untrusted text."
+section = "dual-llm"
+
+[concepts.relations]
+part-of = ["dual-llm"]
+
+[[concepts]]
+id = "quarantined-model"
+term = "quarantined model"
+definition = "A quarantined model reads that text and holds no tools, so it has nothing to send or fetch with."
+section = "dual-llm"
+
+[concepts.relations]
+part-of = ["dual-llm"]
+
+[[concepts]]
+id = "plan-then-execute"
+term = "plan-then-execute"
+definition = "Plan-then-execute fixes the plan before the reply is read."
+section = "plan-then-execute"
+context = "ai-agents"
+
+[[concepts]]
+id = "taint-label"
+term = "taint label"
+aliases = ["taint labels"]
+definition = "Taint labels follow a value's origin."
+section = "taint-labels"
+context = "ai-agents"
+
+# Chapter 11
+
+[[concepts]]
+id = "adaptive-attacker"
+term = "adaptive attacker"
+definition = "A real attacker sees what happened and tries again."
+section = "adaptive-attacker"

@@ -1,0 +1,36 @@
+# Chapter injection-detectors's narration (re-check narration): descriptions of its examples, blocks and tables, as
+# [examples.ID], [[blocks]] and [[tables]], and its own readings. Only this chapter's writer edits this file, so
+# writers working in parallel never append to one shared lexicon. A reading every chapter needs goes into
+# narration/lexicon.toml, which wins over a chapter's.
+
+[terms]
+"[UNK]" = "unknown token"
+"TPR" = "true positive rate"
+"TNR" = "true negative rate"
+"deberta-v3-base-prompt-injection-v2" = "deberta, version three, base, prompt injection, version two"
+"Qwen3Guard-Gen-0.6B" = "chwen three guard, gen, point six B"
+"Prompt Guard 2" = "prompt guard, two"
+"Llama Guard" = "llama guard"
+
+[words]
+
+[examples.detector-threshold-dev]
+say = "This loads the pinned classifier and scores the office's distinct records and the attack cases' carrier texts on the dev split. It prints the flagged counts at each value on the threshold grid, then the value it picks, which is the lowest one that flags no more than one dev benign record. The injected count is the same at every value, and so is the benign count. Last, it prints how many dev scores sit within 0.02 of the pick."
+
+[examples.detector-held-out]
+say = "This scores the held-out split once, at the value dev picked. It prints the share of held-out injected texts flagged and the share of held-out benign records flagged, each with its interval, then the flags by attack style and by record kind. The invisible style is flagged {{out:detector-held-out:held-out injected flagged, style sty-invisible}} on this set."
+
+[examples.detector-public-corpora]
+say = "This scores two public corpora at the same value: deepset's test split, with injected and benign rows, and the Gandalf set, which holds attacks only. It prints how many injected and benign rows are flagged, the Gandalf recall, the near-threshold counts, and a line on whether the classifier's training data may have overlapped these corpora."
+
+[examples.detector-filter-paired]
+say = "This runs the classifier as a filter on each tool result, at the dev value, and compares each split with the undefended run on the same cases. It prints the utility and attack success for dev and held-out, the paired differences with their intervals, and how many benign tasks and attack cases had a tool result withheld. The withheld counts come from the withhold events in the traces. It names no task or record."
+
+[examples.open-model-detector]
+say = "This reads the open model's yes-or-no verdicts from a recorded run of the pinned model, and counts a reply as a verdict only when it is exactly yes or no. It prints the flagged shares on dev and held-out, the agreement with the labels on dev, and the true-positive and true-negative rates on dev. It prints the held-out gaps to the classifier, the injected and benign ones apart, each with its interval, and a correction that clips at 1.000 here."
+
+[examples.detector-regressions]
+say = "This runs the filter on the structural attempts from the security review, with no generative model. It asserts each verdict and prints one line per attempt, by name only. Each injection is withheld, except the benign text, which passes."
+
+[examples.content-guard-contrast]
+say = "This reads a content-safety guard's verdicts from a recorded run of its pinned model. It prints how many injected texts the guard labels unsafe, and how many it places in a category, on each split, and how many benign records it flags. It then compares the guard with the classifier on the same injected texts, and prints the texts both flag and each one flags alone."

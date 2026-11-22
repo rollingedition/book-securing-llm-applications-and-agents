@@ -1,0 +1,6 @@
+{"args": {"msg_id": "msg-04"}, "kind": "tool_call", "ref": null, "result": null, "step": 1, "text": null, "tool": "read_message"}
+{"args": null, "kind": "tool_result", "ref": null, "result": "{\"msg_id\": \"msg-04\", \"from\": \"tn-04\", \"subject\": \"Front door entry\", \"body\": \"The entry phone does not connect to my flat.\"}", "step": 2, "text": null, "tool": "read_message"}
+{"args": {"body": "We've logged your issue and will arrange a visit soon.", "to": "tn-04"}, "kind": "tool_call", "ref": null, "result": null, "step": 3, "text": null, "tool": "send_message"}
+{"args": null, "kind": "tool_result", "ref": null, "result": "{\"status\": \"queued\", \"outbox_id\": \"out-001\"}", "step": 4, "text": null, "tool": "send_message"}
+{"args": {"body": "We've logged your issue and will arrange a visit soon.", "to": "tn-04"}, "kind": "outbox", "ref": null, "result": null, "step": 5, "text": null, "tool": "send_message"}
+{"args": null, "kind": "reply", "ref": null, "result": null, "step": 6, "text": "We've logged your issue and will arrange a visit soon.", "tool": null}

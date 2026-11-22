@@ -1,0 +1,170 @@
+{
+  "contractor_id": "brk-01",
+  "slots": [
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-01",
+      "start": "2026-12-01T09:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-02",
+      "start": "2026-12-01T11:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-03",
+      "start": "2026-12-01T14:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-04",
+      "start": "2026-12-02T09:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-05",
+      "start": "2026-12-02T11:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-06",
+      "start": "2026-12-02T14:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-07",
+      "start": "2026-12-03T09:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-08",
+      "start": "2026-12-03T11:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-09",
+      "start": "2026-12-03T14:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-10",
+      "start": "2026-12-04T09:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-11",
+      "start": "2026-12-04T11:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-12",
+      "start": "2026-12-04T14:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-13",
+      "start": "2026-12-05T09:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-14",
+      "start": "2026-12-05T11:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-15",
+      "start": "2026-12-05T14:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-16",
+      "start": "2026-12-06T09:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-17",
+      "start": "2026-12-06T11:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-18",
+      "start": "2026-12-06T14:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-19",
+      "start": "2026-12-07T09:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-20",
+      "start": "2026-12-07T11:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-21",
+      "start": "2026-12-07T14:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-22",
+      "start": "2026-12-08T09:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-23",
+      "start": "2026-12-08T11:00"
+    },
+    {
+      "contractor_id": "brk-01",
+      "note": "",
+      "slot_id": "slot-24",
+      "start": "2026-12-08T14:00"
+    }
+  ],
+  "tool_description_base": "Book one visit slot for a ticket. Creates a booking.",
+  "tools": [
+    {
+      "description": "List open visit slots for a contractor between two dates, inclusive.",
+      "name": "list_slots",
+      "parameters": {
+        "contractor_id": "string",
+        "date_from": "YYYY-MM-DD",
+        "date_to": "YYYY-MM-DD"
+      }
+    },
+    {
+      "description": "Book one visit slot for a ticket. Creates a booking.",
+      "name": "book_visit",
+      "parameters": {
+        "contractor_id": "string",
+        "slot_id": "string",
+        "ticket_id": "string"
+      }
+    }
+  ]
+}

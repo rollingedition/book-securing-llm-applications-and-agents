@@ -1,0 +1,31 @@
+# Chapter third-party-parts's narration (re-check narration): descriptions of its examples, blocks and tables, as
+# [examples.ID], [[blocks]] and [[tables]], and its own readings. Only this chapter's writer edits this file, so
+# writers working in parallel never append to one shared lexicon. A reading every chapter needs goes into
+# narration/lexicon.toml, which wins over a chapter's.
+
+[examples.description-behaviour-check]
+say = "This example checks each contractor tool's declared effect and arguments against what the tool does. It compares the arguments the code reads with the arguments the schema names, and makes one call to see whether a write claim writes. It does not read the descriptions' text for instructions."
+
+[examples.pin-tool-definitions]
+say = "This example pins the two contractor tool definitions, then changes one copy of a description and checks the pins again. The changed tool gets a verdict of changed, and the listing step drops it."
+
+[examples.model-file-checks]
+say = "This example checks the classifier's pinned files against their hashes, and lists any file in the model folder that has no pin, by name, without opening it. It then scans a test pickle that only calls print, without loading it, and prints what the scanner reports."
+
+[examples.dependency-pin-check]
+say = "This example reads a copy of the requirements file and counts the lines pinned with an exact version. It asserts that every requirement is pinned, and that the only option line is the one allowed index."
+
+[examples.third-party-bypasses]
+say = "This example runs the security review's attempts against the pin, claim, argument, model folder and requirement checks, and asserts the verdict each one gives. It is a set of regression rows, not a measure of how often an attack gets through."
+
+[terms]
+"readOnlyHint" = "read only hint"
+"destructiveHint" = "destructive hint"
+"NFC" = "N F C"
+"#" = "number sign"
+"AML.T0110" = "A M L dot T zero one one zero"
+"AML.T0109" = "A M L dot T zero one zero nine"
+"MITRE" = "my-tre"
+"D3FEND" = "dee-fend"
+
+[words]

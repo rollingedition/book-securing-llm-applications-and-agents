@@ -1,0 +1,21 @@
+# Chapter attack-and-measure's narration (re-check narration): descriptions of its examples, blocks and tables, as
+# [examples.ID], [[blocks]] and [[tables]], and its own readings. Only this chapter's writer edits this file, so
+# writers working in parallel never append to one shared lexicon. A reading every chapter needs goes into
+# narration/lexicon.toml, which wins over a chapter's.
+
+[examples.attack-allowlist-probes]
+say = "The code runs three scripted episodes against the harness. In the first, the allowlist check returns no decision, and no page is fetched. In the second, the model passes a number where a date belongs, and the episode ends with an error result instead of crashing. In the third, the model calls a tool the rule does not know, and the call is refused and recorded as a defence event."
+
+[terms]
+"Qwen3-4B-Instruct-2507" = "chwen three, four B, instruct, twenty twenty-five oh seven"
+
+[words]
+
+[examples.attack-rough-baseline]
+say = "This replays the undefended assistant on the rough set: twenty attack cases and ten benign tasks, with no defence. It prints the share of attack cases where the attacker's goal is met, with its interval, which is {{out:attack-rough-baseline:attack success, 20 cases}}. It also prints the share of benign tasks that pass, the share of attack runs where the user's task still passes, and how many attack runs looked up the targeted tenant, which is {{out:attack-rough-baseline:lookup of the targeted tenant, attack cases}}."
+
+[examples.attack-allowlist-paired]
+say = "This runs the same twenty attack cases and ten benign tasks with the outbound allowlist enforced, then pairs each case with its undefended result. It prints the four paired counts, the paired difference in attack success with its interval, the number of calls the allowlist refused, by tool, and how many attack runs still looked up the targeted tenant. The paired difference is {{out:attack-allowlist-paired:paired difference in attack success, allowlist minus baseline}}. A check in the code stops the run if a benign task that passed without the allowlist fails with it."
+
+[examples.attack-interval-width]
+say = "This computes no model run. It shows how wide a bootstrap interval is for the same observed rate on twenty cases, on a hundred and on two hundred. On twenty cases the width is {{out:attack-interval-width:interval width, 10 of 20}}."

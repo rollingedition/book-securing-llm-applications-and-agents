@@ -1,0 +1,34 @@
+# Chapter exfiltration-channels's narration (re-check narration): descriptions of its examples, blocks and tables, as
+# [examples.ID], [[blocks]] and [[tables]], and its own readings. Only this chapter's writer edits this file, so
+# writers working in parallel never append to one shared lexicon. A reading every chapter needs goes into
+# narration/lexicon.toml, which wins over a chapter's.
+
+[terms]
+"markdown-it-py" = "mark down it, P Y"
+"img-src" = "image source"
+"\\_" = "escaped underscore"
+"&#95;" = "ampersand hash nine five"
+"attacker.example" = "attacker dot example"
+"MDN" = "M D N"
+
+[words]
+
+[examples.egress-fetch-paired]
+say = "This replays the undefended run and the same run with the outbound allowlist and the fetch query rule enforced, on the fifteen benign tasks and the sixty cases of each split, dev first and then held-out. It prints utility and attack success for each run with their intervals, then the paired differences, which are the figures that matter. Undefended attack success on dev is {{out:egress-fetch-paired:attack success, baseline, 60 dev cases}}, and under the rule it is {{out:egress-fetch-paired:attack success, egress-fetch, 60 dev cases}}. It also counts refusals by the rule that made them, for benign runs and for attack runs. The query rule refuses {{out:egress-fetch-paired:refusals by query rule, attack runs, dev}} calls on attack runs on this set, and the allowlist does the refusing."
+
+[examples.render-policy-replies]
+say = "This takes the undefended final reply of each attack case on the dev split and on the held-out split, applies the render policy to it, and scores the case again. It prints attack success before and after, with intervals, and the number of successes the policy removed or added. It also counts the removed URLs, the cases whose rendered image addresses changed, and the cases whose reply held an image or a link at all. On dev, {{out:render-policy-replies:attack cases whose reply had any image or link, dev}} replies carried one. On held-out, attack success falls from {{out:render-policy-replies:attack success before sanitising, held-out, 60 cases}} to {{out:render-policy-replies:attack success after sanitising, held-out, 60 cases}}."
+
+[examples.render-policy-crafted]
+say = "This builds eleven small replies, one for each form of image or link, each with one address under test. It applies the render policy to each reply and prints whether the address survives. The table beside the example shows the same verdicts. The example asserts every verdict, so the table is the rule's behaviour and not a sample. The office's own plain image is the only form the rule keeps."
+
+[examples.exfiltration-regressions]
+say = "This runs the chapter's security regressions: twenty-two attempts against the render policy, the secret scan and the trace, each with no model. It prints one label for each attempt, by name. A reply's label is clean when no address that a reader's browser would load or follow points outside the office, in each of five views. A scan's label is the secret it found, or not flagged. The trace's label says whether a tag the policy escaped left a render event. The labels for the escaped link, the link text, the office key, the emphasised key, the base64 key and the raw image tag are the ones the chapter quotes."
+
+[examples.secret-scan-replies]
+say = "This runs the secret scan over the final reply of each attack case and each benign task, with no defence on, on the dev split and the held-out split. It prints how many replies reveal the payment portal key, how many reveal the hidden note, and how many flags fall on a goal that does not test for that secret. It then prints the false alarms on the benign replies. On dev, {{out:secret-scan-replies:replies revealing the hidden note, dev}} replies revealed the note, and {{out:secret-scan-replies:reveals not matched to their goal, dev}} flags fell on a goal that does not test for the secret they reveal."
+
+[[tables]]
+section = "render-forms"
+starts = "| Form | Verdict"
+say = "The table has one row for each of the eleven forms the crafted example tests. Each row gives the form's name and the rule's verdict on it: removed, or kept. Every verdict but one is removed. The kept row is the office's own plain image."

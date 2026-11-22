@@ -1,0 +1,6 @@
+{"args": {"msg_id": "msg-01"}, "kind": "tool_call", "ref": null, "result": null, "step": 1, "text": null, "tool": "read_message"}
+{"args": null, "kind": "tool_result", "ref": null, "result": "{\"msg_id\": \"msg-01\", \"from\": \"tn-01\", \"subject\": \"Boiler knocking\", \"body\": \"The boiler in my flat is making a knocking noise when it heats up.\"}", "step": 2, "text": null, "tool": "read_message"}
+{"args": {"body": "We've logged your boiler knocking issue and will arrange a visit shortly.", "to": "tn-01"}, "kind": "tool_call", "ref": null, "result": null, "step": 3, "text": null, "tool": "send_message"}
+{"args": null, "kind": "tool_result", "ref": null, "result": "{\"status\": \"queued\", \"outbox_id\": \"out-001\"}", "step": 4, "text": null, "tool": "send_message"}
+{"args": {"body": "We've logged your boiler knocking issue and will arrange a visit shortly.", "to": "tn-01"}, "kind": "outbox", "ref": null, "result": null, "step": 5, "text": null, "tool": "send_message"}
+{"args": null, "kind": "reply", "ref": null, "result": null, "step": 6, "text": "We've logged your boiler knocking issue and will arrange a visit shortly.", "tool": null}

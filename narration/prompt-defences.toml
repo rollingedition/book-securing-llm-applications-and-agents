@@ -1,0 +1,29 @@
+# Chapter prompt-defences's narration (re-check narration): descriptions of its examples, blocks and tables, as
+# [examples.ID], [[blocks]] and [[tables]], and its own readings. Only this chapter's writer edits this file, so
+# writers working in parallel never append to one shared lexicon. A reading every chapter needs goes into
+# narration/lexicon.toml, which wins over a chapter's.
+
+[examples.prompt-defences-paired]
+say = "The code runs each of the five prompt-level defences on the dev split and compares it with the undefended run. It prints utility and attack success for each, with their paired differences and intervals. Read each defence's attack success line first. The warning's attack success is {{out:prompt-defences-paired:prompt-warning, attack success, 60 dev cases}}."
+
+[examples.prompt-defences-held-out]
+say = "The code runs each defence once on the held-out split, after its wording was fixed on dev, and compares it with the held-out undefended run. It prints the same measures as the dev example. Read each defence's paired attack success, and whether its interval runs across zero. Only encoding's interval lies wholly below zero."
+
+[examples.prompt-cost-tokens]
+say = "The code counts the tokens each defence adds to the prompts a dev benign task's model calls read, summed over those calls, and prints the median over those tasks. It also prints how many model calls each run made, because a run with fewer calls has fewer prompts to add to. For encoding, the median is {{out:prompt-cost-tokens:prompt-encode, added prompt tokens, median}} tokens, and {{out:prompt-cost-tokens:prompt-encode, added prompt tokens in tool definitions, median}} of them fall on the tool definitions."
+
+[examples.prompt-repeat-why]
+say = "The code finds the dev benign tasks whose check needs a side-effecting call, and counts how many end in a text reply without it. It does this for the undefended run and for the repeated request, on the same tasks. With the repeated request, the tasks that need an action end in text: {{out:prompt-repeat-why:prompt-repeat, text reply without the needed call}}."
+
+[examples.prompt-small-model]
+say = "The code runs the undefended 0.6B model on the dev split and sets its utility and attack success beside the 4B model's. It also counts, for each model, the counted attack cases in which the model never called the tool that returns the injected text. Read the two carrier counts last. The 0.6B model never called that tool in {{out:prompt-small-model:never read the carrier, 0.6B}} counted cases. The tool-description cases are left out of both counts, and there are {{out:prompt-small-model:tool-description cases left out}} of them."
+
+[terms]
+"0.6B" = "zero point six B"
+"4B" = "four B"
+"base64" = "base sixty-four"
+"AgentDojo" = "agent dojo"
+"arXiv" = "archive"
+"Qwen3" = "chwen three"
+
+[words]

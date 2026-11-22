@@ -1,0 +1,4 @@
+{"args": {"url": "https://quillmere.example/hours"}, "kind": "tool_call", "ref": null, "result": null, "step": 1, "text": null, "tool": "fetch_page"}
+{"args": null, "kind": "tool_result", "ref": null, "result": "{\"status\": 200, \"text\": \"We are open 09:00 to 17:30 on weekdays.\"}", "step": 2, "text": null, "tool": "fetch_page"}
+{"args": {"url": "https://quillmere.example/hours"}, "kind": "fetch", "ref": null, "result": 200, "step": 3, "text": null, "tool": "fetch_page"}
+{"args": null, "kind": "reply", "ref": null, "result": null, "step": 4, "text": "The closing time on weekdays is 17:30.", "tool": null}

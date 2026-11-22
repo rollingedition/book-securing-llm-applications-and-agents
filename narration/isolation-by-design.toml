@@ -1,0 +1,40 @@
+# Chapter isolation-by-design's narration (re-check narration): descriptions of its examples, blocks and tables, as
+# [examples.ID], [[blocks]] and [[tables]], and its own readings. Only this chapter's writer edits this file, so
+# writers working in parallel never append to one shared lexicon. A reading every chapter needs goes into
+# narration/lexicon.toml, which wins over a chapter's.
+
+[terms]
+"Qwen3-4B-Instruct-2507" = "chwen three, four B, instruct, twenty twenty-five oh seven"
+"CaMeL" = "CAM-ul"
+"AgentDojo" = "agent dojo"
+"ask_quarantined" = "ask quarantined"
+"send_message" = "send message"
+"search_documents" = "search documents"
+"fetch_page" = "fetch page"
+"book_visit" = "book visit"
+"list_slots" = "list slots"
+"S8" = "S eight"
+"R9" = "R nine"
+"R17" = "R seventeen"
+
+[words]
+
+[examples.isolation-paired]
+say = "This replays the recorded runs of the undefended assistant and of each of the three designs on the same benign tasks and attack cases, on both splits, and pairs each design with the undefended run. For the dual LLM on dev, utility is {{out:isolation-paired:utility, design-dual-llm, 15 benign tasks}} and attack success is {{out:isolation-paired:attack success, design-dual-llm, 60 cases}}."
+
+[examples.isolation-cost]
+say = "This reads the traces of the benign tasks each design lost and counts what caused each loss: refused calls, questions to the quarantined model, and the number of calls in each first reply. On dev the taint check refused {{out:isolation-cost:benign tasks refused, design-taint}} benign tasks, and the first replies of the plan-then-execute planner held more than one call in {{out:isolation-cost:first replies holding more than one call, design-plan-then-execute}} benign tasks."
+
+[examples.dual-llm-references]
+say = "This runs one benign task and one attack case under the dual LLM, and prints each call by tool and question name, never its text. The benign task's reply has a body with no reference in it: {{out:dual-llm-references:benign call 2}}."
+
+[examples.isolation-regressions]
+say = "This runs each path the designs must catch, and each path they do not, one line per case, with the case's row. The refused lines are the checks working. The allowed lines are the limits this chapter states. The first line is the taint check refusing a copied URL, and the last is a reply body that is sent, because the plan has written it after the untrusted text was read."
+
+[examples.taint-label-origins]
+say = "This runs the taint check on one crafted untrusted message and three candidate calls, with no model involved. The first call is allowed. The second is refused, because its body shares a run of eight characters with the message: {{out:taint-label-origins:call 2, send_message call}}."
+
+[[tables]]
+section = "the-utility-cost"
+starts = "| Design | Dev utility"
+say = "The table has one row for each design, with the undefended assistant first. Each row gives the design's utility on the benign tasks and its attack success, on the dev split and on the held-out split. Read each row across its two splits, not down one column."

@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "server": "contractor",
+  "hash": "sha256 of canonical JSON of the whole definition: every key; NFC strings; sorted keys, no spaces",
+  "tools": {
+    "book_visit": "a760b06f5c4954dde51611c7606b4b24cd3ce60c932bf08364842281b91b915b",
+    "list_slots": "9ca60baa7451ea81d1d1315013f8c976636611bd0a0df89b2c8b6d3312b14d7b"
+  }
+}

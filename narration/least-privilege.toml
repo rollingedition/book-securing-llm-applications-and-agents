@@ -1,0 +1,32 @@
+# Chapter least-privilege's narration (re-check narration): descriptions of its examples, blocks and tables, as
+# [examples.ID], [[blocks]] and [[tables]], and its own readings. Only this chapter's writer edits this file, so
+# writers working in parallel never append to one shared lexicon. A reading every chapter needs goes into
+# narration/lexicon.toml, which wins over a chapter's.
+
+[terms]
+"Qwen3-4B-Instruct-2507" = "chwen three, four B, instruct, twenty twenty-five oh seven"
+"special=False" = "special equals false"
+"GPT-4o" = "G P T four oh"
+"I.A.3" = "section one, A, three"
+"MCP" = "M C P"
+
+[words]
+
+[examples.least-privilege-paired]
+say = "This replays the undefended assistant on the sixty dev cases and the fifteen dev tasks, then replays it again with each of three defences: a per-task tool filter, an argument policy and an approval step. For each defence it prints the share of attack cases where the attacker's goal is met, which for the filter is {{out:least-privilege-paired:enforce-filter, attack success, 60 dev cases}}, with the paired change from the baseline, {{out:least-privilege-paired:enforce-filter, paired difference in attack success}}. It also prints the utility on the dev tasks and the refusals by tool, so a listener can see where the argument policy refused calls."
+
+[examples.least-privilege-by-goal]
+say = "This groups the undefended assistant's successful attacks by the goal each one tried to reach, and counts how many of each goal each defence stopped. The filter stopped {{out:least-privilege-by-goal:enforce-filter, baseline successes blocked, all goals}} of the baseline's successes. The approval step stopped {{out:least-privilege-by-goal:enforce-approval, baseline successes blocked, all goals}}, and the example checks that zero from the data. Only {{out:least-privilege-by-goal:baseline successes that made a gated call, all goals}} of the successes made a gated call, the two that the approver passed as the user's own requests."
+
+[examples.control-tokens-paired]
+say = "This runs eleven control cases, which sit outside the book's frozen set, twice: once with the chat markers parsed inside the untrusted text, and once with the fix that tokenises that text with special tokens off. It prints the attack success on each run, the paired change, and how many cases had the chat marker's ID reach the model. Without the fix that count is {{out:control-tokens-paired:control token reached the model, special parsed, control set (11 cases, outside the frozen 120)}}, and with it the count is {{out:control-tokens-paired:control token reached the model, special off, control set (11 cases, outside the frozen 120)}}."
+
+[examples.least-privilege-regressions]
+say = "This runs the same fetch rule on more forms of the phone number, in the path, the query and the fragment, with no model, and asserts a verdict for each. The rule refuses the plain and encoded forms. It allows four forms the example names as limits: base64, hex, a partial number, and a value split across two fetches. It then runs the control-token check on eight paths and asserts that the fixed mode adds no chat marker beyond the harness's own. It prints form names only."
+
+[examples.argument-policy-bypasses]
+say = "This runs the argument policy's fetch rule directly, with no model and no recording, on one tenant's phone number written in six forms. It sends each form to the office's own host and to a host the office does not own, and prints whether the rule allows the call. It prints the form's name, never the number. The rule allows two of the six forms on the office's host, the number in base64 and a partial number, and the example checks that list and prints the count."
+
+
+[examples.least-privilege-held-out]
+say = "This replays the undefended assistant and each of the three defences once more, on the sixty held-out cases and the fifteen held-out tasks, and pairs each defence with the baseline on the same cases. For the baseline, the share of attack cases where the goal is met is {{out:least-privilege-held-out:baseline, attack success, 60 held-out cases}}. For the filter, the paired change in that share is {{out:least-privilege-held-out:enforce-filter, paired difference in attack success, held-out}}, with its interval. For the approval step it prints how many of the successful attacks that made a gated call the step blocked, which is {{out:least-privilege-held-out:enforce-approval, held-out gated successes blocked}} of {{out:least-privilege-held-out:enforce-approval, held-out successes that used a gated tool}}."

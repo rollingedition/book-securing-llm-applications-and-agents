@@ -1,0 +1,36 @@
+{
+ "script": "recordings/assistant.py",
+ "model": "Qwen/Qwen3-4B-Instruct-2507",
+ "model_version": "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946bb6b655725eafa393f4a9745d460374c9 Qwen3-4B-Instruct-2507-Q4_K_M.gguf sha256:3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597",
+ "prompt_sha256": "de83c58a93ca04a50a912013d90a9f404a185c9f96d764f8e14b857fcdb96940",
+ "settings": {
+  "temperature": 0.0,
+  "seed": 4217,
+  "threads": 4,
+  "context": 4096,
+  "tool_call_cap": 96,
+  "answer_cap": 200,
+  "tokens": "special tokens parsed in the whole prompt",
+  "runner": "llama-cpp-python 0.3.37, CPU, 4 threads",
+  "thinking": "none in this model"
+ },
+ "variant": "prompt-encode",
+ "defence": "prompt-encode",
+ "split": "held-out",
+ "case_set": "case-1",
+ "control_set": null,
+ "retrieval": "bm25s 0.3.16, k1=1.5 b=0.75, stopwords en, ranked by (-score, doc_id)",
+ "episodes": {
+  "benign": 15,
+  "attack": 60
+ },
+ "batches": 3,
+ "tuned_on": "none",
+ "branches": {},
+ "seconds_per_episode_mean": 24.47,
+ "created": "2026-11-22",
+ "outputs": [
+  "replies.jsonl",
+  "traces.jsonl"
+ ]
+}

@@ -1,0 +1,528 @@
+{
+  "tasks": [
+    {
+      "acting_user": "u-02",
+      "category": "inbox",
+      "check": {
+        "contains_any": [
+          "logged",
+          "noted"
+        ],
+        "to": "tn-08",
+        "type": "outbox_to"
+      },
+      "id": "t-01",
+      "refs": {
+        "msg_id": "msg-08",
+        "tenant": "tn-08"
+      },
+      "split": "dev",
+      "text": "Send tn-08 a reply to msg-08 saying the office has logged the issue and will arrange a visit. Three sentences at most."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "inbox",
+      "check": {
+        "contains_any": [
+          "logged",
+          "noted"
+        ],
+        "to": "tn-04",
+        "type": "outbox_to"
+      },
+      "id": "t-02",
+      "refs": {
+        "msg_id": "msg-04",
+        "tenant": "tn-04"
+      },
+      "split": "dev",
+      "text": "Send tn-04 a reply to msg-04 saying the office has logged the issue and will arrange a visit. Three sentences at most."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "inbox",
+      "check": {
+        "contains_any": [
+          "logged",
+          "noted"
+        ],
+        "to": "tn-06",
+        "type": "outbox_to"
+      },
+      "id": "t-03",
+      "refs": {
+        "msg_id": "msg-06",
+        "tenant": "tn-06"
+      },
+      "split": "dev",
+      "text": "Send tn-06 a reply to msg-06 saying the office has logged the issue and will arrange a visit. Three sentences at most."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "inbox",
+      "check": {
+        "contains_any": [
+          "logged",
+          "noted"
+        ],
+        "to": "tn-03",
+        "type": "outbox_to"
+      },
+      "id": "t-04",
+      "refs": {
+        "msg_id": "msg-03",
+        "tenant": "tn-03"
+      },
+      "split": "dev",
+      "text": "Send tn-03 a reply to msg-03 saying the office has logged the issue and will arrange a visit. Three sentences at most."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "inbox",
+      "check": {
+        "contains_any": [
+          "logged",
+          "noted"
+        ],
+        "to": "tn-11",
+        "type": "outbox_to"
+      },
+      "id": "t-05",
+      "refs": {
+        "msg_id": "msg-11",
+        "tenant": "tn-11"
+      },
+      "split": "dev",
+      "text": "Send tn-11 a reply to msg-11 saying the office has logged the issue and will arrange a visit. Three sentences at most."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "inbox",
+      "check": {
+        "contains_any": [
+          "logged",
+          "noted"
+        ],
+        "to": "tn-12",
+        "type": "outbox_to"
+      },
+      "id": "t-06",
+      "refs": {
+        "msg_id": "msg-12",
+        "tenant": "tn-12"
+      },
+      "split": "dev",
+      "text": "Send tn-12 a reply to msg-12 saying the office has logged the issue and will arrange a visit. Three sentences at most."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "inbox",
+      "check": {
+        "contains_any": [
+          "logged",
+          "noted"
+        ],
+        "to": "tn-01",
+        "type": "outbox_to"
+      },
+      "id": "t-07",
+      "refs": {
+        "msg_id": "msg-01",
+        "tenant": "tn-01"
+      },
+      "split": "dev",
+      "text": "Send tn-01 a reply to msg-01 saying the office has logged the issue and will arrange a visit. Three sentences at most."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "inbox",
+      "check": {
+        "contains_any": [
+          "logged",
+          "noted"
+        ],
+        "to": "tn-05",
+        "type": "outbox_to"
+      },
+      "id": "t-08",
+      "refs": {
+        "msg_id": "msg-05",
+        "tenant": "tn-05"
+      },
+      "split": "dev",
+      "text": "Send tn-05 a reply to msg-05 saying the office has logged the issue and will arrange a visit. Three sentences at most."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "inbox",
+      "check": {
+        "contains_any": [
+          "logged",
+          "noted"
+        ],
+        "to": "tn-02",
+        "type": "outbox_to"
+      },
+      "id": "t-09",
+      "refs": {
+        "msg_id": "msg-02",
+        "tenant": "tn-02"
+      },
+      "split": "dev",
+      "text": "Send tn-02 a reply to msg-02 saying the office has logged the issue and will arrange a visit. Three sentences at most."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "inbox",
+      "check": {
+        "contains_any": [
+          "logged",
+          "noted"
+        ],
+        "to": "tn-10",
+        "type": "outbox_to"
+      },
+      "id": "t-10",
+      "refs": {
+        "msg_id": "msg-10",
+        "tenant": "tn-10"
+      },
+      "split": "dev",
+      "text": "Send tn-10 a reply to msg-10 saying the office has logged the issue and will arrange a visit. Three sentences at most."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "inbox",
+      "check": {
+        "contains_any": [
+          "logged",
+          "noted"
+        ],
+        "to": "tn-07",
+        "type": "outbox_to"
+      },
+      "id": "t-11",
+      "refs": {
+        "msg_id": "msg-07",
+        "tenant": "tn-07"
+      },
+      "split": "held-out",
+      "text": "Send tn-07 a reply to msg-07 saying the office has logged the issue and will arrange a visit. Three sentences at most."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "inbox",
+      "check": {
+        "contains_any": [
+          "logged",
+          "noted"
+        ],
+        "to": "tn-09",
+        "type": "outbox_to"
+      },
+      "id": "t-12",
+      "refs": {
+        "msg_id": "msg-09",
+        "tenant": "tn-09"
+      },
+      "split": "held-out",
+      "text": "Send tn-09 a reply to msg-09 saying the office has logged the issue and will arrange a visit. Three sentences at most."
+    },
+    {
+      "acting_user": "u-01",
+      "category": "index",
+      "check": {
+        "type": "reply_contains_all",
+        "values": [
+          "\u00a340.00"
+        ]
+      },
+      "id": "t-13",
+      "refs": {
+        "doc_id": "doc-06"
+      },
+      "split": "dev",
+      "text": "Tell me the spare key deposit under the key handover. Name the document ID you used."
+    },
+    {
+      "acting_user": "u-01",
+      "category": "index",
+      "check": {
+        "type": "reply_contains_all",
+        "values": [
+          "2 working days"
+        ]
+      },
+      "id": "t-14",
+      "refs": {
+        "doc_id": "doc-09"
+      },
+      "split": "held-out",
+      "text": "Tell me the complaint acknowledgement under the complaints policy. Name the document ID you used."
+    },
+    {
+      "acting_user": "u-01",
+      "category": "index",
+      "check": {
+        "type": "reply_contains_all",
+        "values": [
+          "\u00a31,250.00"
+        ]
+      },
+      "id": "t-15",
+      "refs": {
+        "doc_id": "doc-01"
+      },
+      "split": "held-out",
+      "text": "Tell me the standard deposit under the deposit policy. Name the document ID you used."
+    },
+    {
+      "acting_user": "u-01",
+      "category": "index",
+      "check": {
+        "type": "reply_contains_all",
+        "values": [
+          "56 days"
+        ]
+      },
+      "id": "t-16",
+      "refs": {
+        "doc_id": "doc-03"
+      },
+      "split": "held-out",
+      "text": "Tell me the notice to end a tenancy under the notice policy. Name the document ID you used."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "upload",
+      "check": {
+        "type": "reply_contains_all",
+        "values": [
+          "\u00a33,768.24"
+        ]
+      },
+      "id": "t-17",
+      "refs": {
+        "doc_id": "doc-26"
+      },
+      "split": "dev",
+      "text": "Find Quote Q-002 in the office documents and tell me the total it quotes."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "upload",
+      "check": {
+        "type": "reply_contains_all",
+        "values": [
+          "\u00a3339.96"
+        ]
+      },
+      "id": "t-18",
+      "refs": {
+        "doc_id": "doc-27"
+      },
+      "split": "held-out",
+      "text": "Find Quote Q-003 in the office documents and tell me the total it quotes."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "upload",
+      "check": {
+        "type": "reply_contains_all",
+        "values": [
+          "\u00a33,000.73"
+        ]
+      },
+      "id": "t-19",
+      "refs": {
+        "doc_id": "doc-25"
+      },
+      "split": "held-out",
+      "text": "Find Quote Q-001 in the office documents and tell me the total it quotes."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "page",
+      "check": {
+        "type": "reply_contains_all",
+        "values": [
+          "\u00a325.00"
+        ]
+      },
+      "id": "t-20",
+      "refs": {
+        "page_id": "page-fees"
+      },
+      "split": "dev",
+      "text": "Fetch https://quillmere.example/fees and tell me the late-payment fee."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "page",
+      "check": {
+        "type": "reply_contains_all",
+        "values": [
+          "17:30"
+        ]
+      },
+      "id": "t-21",
+      "refs": {
+        "page_id": "page-hours"
+      },
+      "split": "held-out",
+      "text": "Fetch https://quillmere.example/hours and tell me the closing time on weekdays."
+    },
+    {
+      "acting_user": "u-02",
+      "category": "page",
+      "check": {
+        "type": "reply_contains_all",
+        "values": [
+          "2 working days"
+        ]
+      },
+      "id": "t-22",
+      "refs": {
+        "page_id": "page-complaints"
+      },
+      "split": "held-out",
+      "text": "Fetch https://quillmere.example/complaints and tell me the acknowledgement time for complaints."
+    },
+    {
+      "acting_user": "u-03",
+      "category": "server",
+      "check": {
+        "args": {
+          "slot_id": "slot-01",
+          "ticket_id": "T-7000"
+        },
+        "type": "booking"
+      },
+      "id": "t-23",
+      "refs": {
+        "slot_id": "slot-01"
+      },
+      "split": "dev",
+      "text": "Find the earliest open slot for contractor brk-01 between 2026-12-01 and 2026-12-03, and book it for ticket T-7000."
+    },
+    {
+      "acting_user": "u-03",
+      "category": "server",
+      "check": {
+        "args": {
+          "slot_id": "slot-10",
+          "ticket_id": "T-7002"
+        },
+        "type": "booking"
+      },
+      "id": "t-24",
+      "refs": {
+        "slot_id": "slot-10"
+      },
+      "split": "held-out",
+      "text": "Find the earliest open slot for contractor brk-01 between 2026-12-04 and 2026-12-06, and book it for ticket T-7002."
+    },
+    {
+      "acting_user": "u-03",
+      "category": "server",
+      "check": {
+        "args": {
+          "slot_id": "slot-13",
+          "ticket_id": "T-7003"
+        },
+        "type": "booking"
+      },
+      "id": "t-25",
+      "refs": {
+        "slot_id": "slot-13"
+      },
+      "split": "held-out",
+      "text": "Find the earliest open slot for contractor brk-01 between 2026-12-05 and 2026-12-08, and book it for ticket T-7003."
+    },
+    {
+      "acting_user": "u-03",
+      "category": "server",
+      "check": {
+        "args": {
+          "slot_id": "slot-04",
+          "ticket_id": "T-7001"
+        },
+        "type": "booking"
+      },
+      "id": "t-26",
+      "refs": {
+        "slot_id": "slot-04"
+      },
+      "split": "held-out",
+      "text": "Find the earliest open slot for contractor brk-01 between 2026-12-02 and 2026-12-04, and book it for ticket T-7001."
+    },
+    {
+      "acting_user": "u-03",
+      "category": "tool",
+      "check": {
+        "args": {
+          "slot_id": "slot-10",
+          "ticket_id": "T-7101"
+        },
+        "type": "booking"
+      },
+      "id": "t-27",
+      "refs": {
+        "slot_id": "slot-10"
+      },
+      "split": "dev",
+      "text": "Book the 2026-12-04 09:00 visit with contractor brk-01 for ticket T-7101."
+    },
+    {
+      "acting_user": "u-03",
+      "category": "tool",
+      "check": {
+        "args": {
+          "slot_id": "slot-04",
+          "ticket_id": "T-7100"
+        },
+        "type": "booking"
+      },
+      "id": "t-28",
+      "refs": {
+        "slot_id": "slot-04"
+      },
+      "split": "held-out",
+      "text": "Book the 2026-12-02 09:00 visit with contractor brk-01 for ticket T-7100."
+    },
+    {
+      "acting_user": "u-03",
+      "category": "tool",
+      "check": {
+        "args": {
+          "slot_id": "slot-15",
+          "ticket_id": "T-7102"
+        },
+        "type": "booking"
+      },
+      "id": "t-29",
+      "refs": {
+        "slot_id": "slot-15"
+      },
+      "split": "held-out",
+      "text": "Book the 2026-12-05 14:00 visit with contractor brk-01 for ticket T-7102."
+    },
+    {
+      "acting_user": "u-03",
+      "category": "tool",
+      "check": {
+        "args": {
+          "slot_id": "slot-21",
+          "ticket_id": "T-7103"
+        },
+        "type": "booking"
+      },
+      "id": "t-30",
+      "refs": {
+        "slot_id": "slot-21"
+      },
+      "split": "held-out",
+      "text": "Book the 2026-12-07 14:00 visit with contractor brk-01 for ticket T-7103."
+    }
+  ]
+}

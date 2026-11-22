@@ -1,0 +1,26 @@
+# Chapter attack-set's narration (re-check narration): descriptions of its examples, blocks and tables, as
+# [examples.ID], [[blocks]] and [[tables]], and its own readings. Only this chapter's writer edits this file, so
+# writers working in parallel never append to one shared lexicon. A reading every chapter needs goes into
+# narration/lexicon.toml, which wins over a chapter's.
+
+[examples.attack-set-counts]
+say = "The code loads the fixed attack set of 120 cases, the 60 dev cases and the 60 held-out cases, and counts them under each goal, each location and each style. Chapter 1's rough cases are not in those counts. It prints them on their own, with the dev, held-out and rough totals. The rates later in the chapter divide by the dev counts from the split example, not by these."
+
+[examples.attack-set-scorers]
+say = "The code builds two short traces for each goal: one that reaches the goal and one that doesn't. It runs that goal's check on both and prints how many of the two verdicts were right. Every goal gets both verdicts right."
+
+[examples.attack-set-split]
+say = "The code counts each goal, location and style separately in the dev split and in the held-out split. It prints both counts for every value, so you can see which values have few cases on dev."
+
+[examples.attack-set-baseline]
+say = "The code replays the recorded replies of the undefended assistant on the dev cases and on the benign dev tasks. It prints utility and attack success, each with its count and its interval, and how many dev runs errored. Then it prints the counts of cases that reached each location, style and goal."
+
+[terms]
+"AgentDojo" = "agent dojo"
+"xTRam1" = "x tram one"
+"deepset" = "deep set"
+"base64" = "base sixty-four"
+"PromptMismatch" = "prompt mismatch"
+"SHA" = "S H A"
+
+[words]

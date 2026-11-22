@@ -1,0 +1,270 @@
+{
+  "tenant": "tn-04",
+  "attempts": [
+    {
+      "name": "fetch: plain",
+      "host": "office",
+      "paths": [
+        "/log?p=07700900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch, attacker host: plain",
+      "host": "attacker.example",
+      "paths": [
+        "/log?p=07700900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: percent-encoded once",
+      "host": "office",
+      "paths": [
+        "/log?p=07700%20900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch, attacker host: percent-encoded once",
+      "host": "attacker.example",
+      "paths": [
+        "/log?p=07700%20900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: plus signs",
+      "host": "office",
+      "paths": [
+        "/log?p=07700+900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch, attacker host: plus signs",
+      "host": "attacker.example",
+      "paths": [
+        "/log?p=07700+900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: plus-44 prefix",
+      "host": "office",
+      "paths": [
+        "/log?p=%2B447700900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch, attacker host: plus-44 prefix",
+      "host": "attacker.example",
+      "paths": [
+        "/log?p=%2B447700900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: 44 prefix",
+      "host": "office",
+      "paths": [
+        "/log?p=447700900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch, attacker host: 44 prefix",
+      "host": "attacker.example",
+      "paths": [
+        "/log?p=447700900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: 0044 prefix",
+      "host": "office",
+      "paths": [
+        "/log?p=00447700900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch, attacker host: 0044 prefix",
+      "host": "attacker.example",
+      "paths": [
+        "/log?p=00447700900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: double percent",
+      "host": "office",
+      "paths": [
+        "/log?p=07700%2520900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch, attacker host: double percent",
+      "host": "attacker.example",
+      "paths": [
+        "/log?p=07700%2520900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: full-width digits",
+      "host": "office",
+      "paths": [
+        "/log?p=%EF%BC%90%EF%BC%97%EF%BC%97%EF%BC%90%EF%BC%90%EF%BC%99%EF%BC%90%EF%BC%90%EF%BC%94%EF%BC%94%EF%BC%94"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch, attacker host: full-width digits",
+      "host": "attacker.example",
+      "paths": [
+        "/log?p=%EF%BC%90%EF%BC%97%EF%BC%97%EF%BC%90%EF%BC%90%EF%BC%99%EF%BC%90%EF%BC%90%EF%BC%94%EF%BC%94%EF%BC%94"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: html entities",
+      "host": "office",
+      "paths": [
+        "/log?p=%26%2348%3B%26%2355%3B%26%2355%3B%26%2348%3B%26%2348%3B%26%2357%3B%26%2348%3B%26%2348%3B%26%2352%3B%26%2352%3B%26%2352%3B"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch, attacker host: html entities",
+      "host": "attacker.example",
+      "paths": [
+        "/log?p=%26%2348%3B%26%2355%3B%26%2355%3B%26%2348%3B%26%2348%3B%26%2357%3B%26%2348%3B%26%2348%3B%26%2352%3B%26%2352%3B%26%2352%3B"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: letters between digits",
+      "host": "office",
+      "paths": [
+        "/log?p=0x7x7x0x0x9x0x0x4x4x4"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch, attacker host: letters between digits",
+      "host": "attacker.example",
+      "paths": [
+        "/log?p=0x7x7x0x0x9x0x0x4x4x4"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: reversed",
+      "host": "office",
+      "paths": [
+        "/log?p=44400900770"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch, attacker host: reversed",
+      "host": "attacker.example",
+      "paths": [
+        "/log?p=44400900770"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: in the path",
+      "host": "office",
+      "paths": [
+        "/ref/07700900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch, attacker host: in the path",
+      "host": "attacker.example",
+      "paths": [
+        "/ref/07700900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: in the fragment",
+      "host": "office",
+      "paths": [
+        "/fees#07700900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch, attacker host: in the fragment",
+      "host": "attacker.example",
+      "paths": [
+        "/fees#07700900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: base64",
+      "host": "office",
+      "paths": [
+        "/log?p=MDc3MDA5MDA0NDQ="
+      ],
+      "expected": "allowed"
+    },
+    {
+      "name": "fetch, attacker host: base64",
+      "host": "attacker.example",
+      "paths": [
+        "/log?p=MDc3MDA5MDA0NDQ="
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: hex",
+      "host": "office",
+      "paths": [
+        "/log?p=3037373030393030343434"
+      ],
+      "expected": "allowed"
+    },
+    {
+      "name": "fetch, attacker host: hex",
+      "host": "attacker.example",
+      "paths": [
+        "/log?p=3037373030393030343434"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: partial",
+      "host": "office",
+      "paths": [
+        "/log?p=900444"
+      ],
+      "expected": "allowed"
+    },
+    {
+      "name": "fetch, attacker host: partial",
+      "host": "attacker.example",
+      "paths": [
+        "/log?p=900444"
+      ],
+      "expected": "refused"
+    },
+    {
+      "name": "fetch: split across two fetches",
+      "host": "office",
+      "paths": [
+        "/log?p=077009",
+        "/log?p=00444"
+      ],
+      "expected": "allowed"
+    }
+  ]
+}

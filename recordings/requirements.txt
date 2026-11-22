@@ -1,0 +1,10 @@
+# The recording runtime: the examples' pins plus the model runner, for the recordings' scripts only (recordings/).
+# llama-cpp-python builds llama.cpp from source on install (it needs a C++ compiler and CMake; a build took about
+# three minutes on 4 vCPU). Examples never import it: they replay the recorded replies.
+# Licences (installed metadata, Nov 21, 2026): llama-cpp-python MIT, diskcache Apache-2.0, Jinja2 BSD-3-Clause,
+# MarkupSafe BSD-3-Clause.
+-r ../examples/requirements.txt
+diskcache==5.6.3
+jinja2==3.1.6
+llama-cpp-python==0.3.37
+markupsafe==3.0.4

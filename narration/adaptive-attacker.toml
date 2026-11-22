@@ -1,0 +1,43 @@
+# Chapter adaptive-attacker's narration (re-check narration): descriptions of its examples, blocks and tables, as
+# [examples.ID], [[blocks]] and [[tables]], and its own readings. Only this chapter's writer edits this file, so
+# writers working in parallel never append to one shared lexicon. A reading every chapter needs goes into
+# narration/lexicon.toml, which wins over a chapter's.
+
+[examples.adaptive-round-count]
+say = "The code takes the twelve dev cases the loop runs on, and replays the recorded attacker chains for five defences, one chain for each defence and case. It checks that round zero of every chain gives the same result as the fixed set for that case and defence. It then counts, for each round from zero to five, how many chains have reached their goal by then, per defence and pooled."
+
+[examples.adaptive-attacker-turns]
+say = "The code replays the same chains and counts how often an attacker turn returned its previous injection unchanged, and how many chains held one distinct injection across all their attacker turns. It checks that the feedback the attacker was shown holds only whether the goal was reached and, for each call, its tool name and decision. It then counts the episodes and attacker turns, and checks them against the recording."
+
+[examples.adaptive-gap]
+say = "The code takes the same twelve cases and five defences and compares two rounds: round zero, which is the fixed case's own injection, and round five, after five attacker turns. For each defence and for all of them pooled, it prints the success count and rate at each round, the difference between them, and an interval around that difference. Every difference comes out at {{out:adaptive-gap:paired difference, pooled, round 5 minus round 0}}."
+
+[[tables]]
+section = "the-gap-to-the-fixed-set"
+starts = "| Defence | Round 0 | Round 5 | Round 5"
+say = "The table has one row for each of the five defences and one for all of them pooled. For each row it gives the success count at round zero, the count at round five, the paired difference between them and its interval. Every difference is {{out:adaptive-gap:paired difference, pooled, round 5 minus round 0}}, so the count at round five equals the count at round zero in every row."
+
+[[tables]]
+section = "mapping-onto-a-toolkit"
+starts = "| Book location or style | What it is"
+say = "The table maps groups of the book's locations and styles to garak modules, five rows in all. Messages and documents map to latent injection. The reply's image and link goals map to web injection, which is about data carried out in the output. Encoded text maps to encoding, and invisible characters map to smuggling, bad characters and the Goodside tag probe. Tool descriptions and fake operator turns have no matching module. The last column gives what each module's own description says it does. Fetched pages have no row."
+
+[terms]
+"TAP" = "tap"
+"TAPCached" = "tap cached"
+"GOATAttack" = "goat attack"
+"PyPI" = "pie P I"
+"OpenAI" = "open A I"
+"garak" = "garak"
+"agent_breaker" = "agent breaker"
+"adaptive_attacks" = "adaptive attacks"
+"atkgen" = "at k gen"
+"goodside" = "good side"
+"PAIR" = "pair"
+"PyRIT" = "pie rit"
+"RAMPART" = "ram part"
+"Spikee" = "spike ee"
+"GGUF" = "G G U F"
+
+[words]
+"adaptive" = "adaptive"

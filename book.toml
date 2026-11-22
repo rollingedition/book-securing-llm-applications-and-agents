@@ -1,0 +1,9 @@
+slug = "securing-llm-applications-and-agents"
+title = "Securing LLM Applications and Agents"
+subtitle = "Attack an assistant that has tools and data, and measure which defences stop it: prompt injection, data exfiltration, tool misuse, and what third parties hand it."
+status = "live"
+level = "in-practice"
+reader = "An engineer who has shipped, or is about to ship, an assistant or agent that reads text other people wrote and acts on it, and who writes Python."
+summary = "How an assistant with tools and data is turned against its users, and which defences measurably stop it: prompt injection, exfiltration, tool misuse and third-party code, on a property office's assistant."
+areas = ["security", "artificial-intelligence"]
+skills = ["llm-security", "ai-agents", "llm-evaluation", "retrieval-augmented-generation", "prompt-engineering"]

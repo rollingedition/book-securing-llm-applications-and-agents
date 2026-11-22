@@ -1,0 +1,13 @@
+{
+  "attempts": [
+    {"name": "S5-1: long benign prefix, injection after it, dev case 1", "family": "S5-1", "placement": "body-after-prefix", "source": "dev-withheld", "index": 0, "expected": "withheld"},
+    {"name": "S5-1: long benign prefix, injection after it, dev case 2", "family": "S5-1", "placement": "body-after-prefix", "source": "dev-withheld", "index": 1, "expected": "withheld"},
+    {"name": "S5-2: injection in slot start field, dev case 1", "family": "S5-2", "placement": "slot-start", "source": "dev-withheld", "index": 0, "expected": "withheld"},
+    {"name": "S5-2: injection in slot start field, dev case 2", "family": "S5-2", "placement": "slot-start", "source": "dev-withheld", "index": 1, "expected": "withheld"},
+    {"name": "S5-3: injection as slot note object, dev case 1", "family": "S5-3", "placement": "slot-note-detail", "source": "dev-withheld", "index": 0, "expected": "withheld"},
+    {"name": "S5-3: injection as slot note object, dev case 2", "family": "S5-3", "placement": "slot-note-detail", "source": "dev-withheld", "index": 1, "expected": "withheld"},
+    {"name": "S5-4: injection in inbox from field, dev case 1", "family": "S5-4", "placement": "inbox-from", "source": "dev-withheld", "index": 0, "expected": "withheld"},
+    {"name": "S5-4: injection in inbox from field, dev case 2", "family": "S5-4", "placement": "inbox-from", "source": "dev-withheld", "index": 1, "expected": "withheld"},
+    {"name": "S5-6: benign text with paragraph breaks and quotes", "family": "S5-6", "placement": "benign-paragraphs", "source": "none", "index": 0, "expected": "passed"}
+  ]
+}

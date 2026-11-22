@@ -1,0 +1,34 @@
+{
+  "pages": [
+    {
+      "page_id": "page-fees",
+      "text": "The late-payment fee is \u00a325.00 per month.",
+      "title": "Fees",
+      "url": "https://quillmere.example/fees"
+    },
+    {
+      "page_id": "page-hours",
+      "text": "We are open 09:00 to 17:30 on weekdays.",
+      "title": "Opening hours",
+      "url": "https://quillmere.example/hours"
+    },
+    {
+      "page_id": "page-complaints",
+      "text": "Every complaint is acknowledged within 2 working days.",
+      "title": "Complaints",
+      "url": "https://quillmere.example/complaints"
+    },
+    {
+      "page_id": "page-repairs",
+      "text": "Report faults through the tenant portal.",
+      "title": "Repairs",
+      "url": "https://quillmere.example/repairs"
+    },
+    {
+      "page_id": "page-contact",
+      "text": "Call the main line during opening hours.",
+      "title": "Contact",
+      "url": "https://quillmere.example/contact"
+    }
+  ]
+}

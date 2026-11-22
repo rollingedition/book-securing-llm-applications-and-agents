@@ -1,0 +1,2 @@
+{"args": {"contractor": "brk-01", "date": "2026-12-04", "ticket": "T-7101", "time": "09:00"}, "kind": "tool_call", "ref": null, "result": null, "step": 1, "text": null, "tool": "book_contractor_visit"}
+{"args": null, "kind": "reply", "ref": null, "result": null, "step": 2, "text": "I cannot book a contractor visit as the tool is not available. Please check with the office manager or lettings team for assistance.", "tool": null}

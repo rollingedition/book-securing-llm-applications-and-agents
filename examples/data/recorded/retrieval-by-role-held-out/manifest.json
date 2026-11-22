@@ -1,0 +1,337 @@
+{
+ "script": "recordings/assistant.py",
+ "model": "Qwen/Qwen3-4B-Instruct-2507",
+ "model_version": "unsloth/Qwen3-4B-Instruct-2507-GGUF@a06e946bb6b655725eafa393f4a9745d460374c9 Qwen3-4B-Instruct-2507-Q4_K_M.gguf sha256:3605803b982cb64aead44f6c1b2ae36e3acdb41d8e46c8a94c6533bc4c67e597",
+ "prompt_sha256": "de83c58a93ca04a50a912013d90a9f404a185c9f96d764f8e14b857fcdb96940",
+ "settings": {
+  "temperature": 0.0,
+  "seed": 4217,
+  "threads": 4,
+  "context": 4096,
+  "tool_call_cap": 96,
+  "answer_cap": 200,
+  "tokens": "special tokens parsed in the whole prompt",
+  "runner": "llama-cpp-python 0.3.37, CPU, 4 threads",
+  "thinking": "none in this model"
+ },
+ "variant": "retrieval-by-role",
+ "defence": "retrieval-by-role",
+ "split": "held-out",
+ "case_set": "case-1",
+ "control_set": null,
+ "retrieval": "bm25s 0.3.16, k1=1.5 b=0.75, stopwords en, ranked by (-score, doc_id)",
+ "episodes": {
+  "benign": 15,
+  "attack": 60
+ },
+ "batches": 1,
+ "tuned_on": "none",
+ "branches": {
+  "t-11": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "t-12": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "t-14": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "t-15": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "t-16": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "t-18": {
+   "branched_from": "baseline-held-out",
+   "from_turn": 1
+  },
+  "t-19": {
+   "branched_from": "baseline-held-out",
+   "from_turn": 1
+  },
+  "t-21": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "t-22": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "t-24": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "t-25": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "t-26": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "t-28": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "t-29": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "t-30": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-001": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-002": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-005": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-006": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-008": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-010": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-012": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-013": {
+   "branched_from": "baseline-held-out",
+   "from_turn": 1
+  },
+  "a-018": {
+   "branched_from": "baseline-held-out",
+   "from_turn": 1
+  },
+  "a-019": {
+   "branched_from": "baseline-held-out",
+   "from_turn": 1
+  },
+  "a-027": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-028": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-032": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-033": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-034": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-037": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-039": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-040": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-041": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-042": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-043": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-046": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-050": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-052": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-054": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-056": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-057": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-061": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-062": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-063": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-064": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-065": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-066": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-067": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-069": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-071": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-072": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-075": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-078": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-079": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-080": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-082": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-083": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-087": {
+   "branched_from": "baseline-held-out",
+   "from_turn": 1
+  },
+  "a-088": {
+   "branched_from": "baseline-held-out",
+   "from_turn": 1
+  },
+  "a-090": {
+   "branched_from": "baseline-held-out",
+   "from_turn": 1
+  },
+  "a-091": {
+   "branched_from": "baseline-held-out",
+   "from_turn": 1
+  },
+  "a-093": {
+   "branched_from": "baseline-held-out",
+   "from_turn": 1
+  },
+  "a-097": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-098": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-101": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-102": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-106": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-107": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-109": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-111": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-114": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-117": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-118": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  },
+  "a-120": {
+   "branched_from": "baseline-held-out",
+   "from_turn": null
+  }
+ },
+ "seconds_per_episode_mean": 0.82,
+ "created": "2026-11-22",
+ "outputs": [
+  "replies.jsonl",
+  "traces.jsonl"
+ ]
+}

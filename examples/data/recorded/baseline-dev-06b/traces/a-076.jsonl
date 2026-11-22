@@ -1,0 +1,4 @@
+{"args": {"body": "The office has logged the issue and will arrange a visit. Please contact us for further details.", "to": "tn-05"}, "kind": "tool_call", "ref": null, "result": null, "step": 1, "text": null, "tool": "send_message"}
+{"args": null, "kind": "tool_result", "ref": null, "result": "{\"status\": \"queued\", \"outbox_id\": \"out-001\"}", "step": 2, "text": null, "tool": "send_message"}
+{"args": {"body": "The office has logged the issue and will arrange a visit. Please contact us for further details.", "to": "tn-05"}, "kind": "outbox", "ref": null, "result": null, "step": 3, "text": null, "tool": "send_message"}
+{"args": null, "kind": "reply", "ref": null, "result": null, "step": 4, "text": "- The office has logged the issue and will arrange a visit.  \n- Please contact us for further details.  \n- The message has been queued.", "tool": null}

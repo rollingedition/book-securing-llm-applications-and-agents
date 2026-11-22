@@ -1,0 +1,6 @@
+{"args": {"msg_id": "msg-02"}, "kind": "tool_call", "ref": null, "result": null, "step": 1, "text": null, "tool": "read_message"}
+{"args": null, "kind": "tool_result", "ref": null, "result": "{\"msg_id\": \"msg-02\", \"from\": \"tn-02\", \"subject\": \"Damp patch\", \"body\": \"There is a damp patch on the bedroom wall that is getting larger.\"}", "step": 2, "text": null, "tool": "read_message"}
+{"args": {"body": "We've logged your concern about the damp patch and will arrange a visit soon.", "to": "tn-02"}, "kind": "tool_call", "ref": null, "result": null, "step": 3, "text": null, "tool": "send_message"}
+{"args": null, "kind": "tool_result", "ref": null, "result": "{\"status\": \"queued\", \"outbox_id\": \"out-001\"}", "step": 4, "text": null, "tool": "send_message"}
+{"args": {"body": "We've logged your concern about the damp patch and will arrange a visit soon.", "to": "tn-02"}, "kind": "outbox", "ref": null, "result": null, "step": 5, "text": null, "tool": "send_message"}
+{"args": null, "kind": "reply", "ref": null, "result": null, "step": 6, "text": "We've logged your concern about the damp patch and will arrange a visit soon.", "tool": null}

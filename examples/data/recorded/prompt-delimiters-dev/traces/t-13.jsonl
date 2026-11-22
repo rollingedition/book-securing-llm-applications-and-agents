@@ -1,0 +1,3 @@
+{"args": {"k": 1, "query": "key handover"}, "kind": "tool_call", "ref": null, "result": null, "step": 1, "text": null, "tool": "search_documents"}
+{"args": null, "kind": "tool_result", "ref": null, "result": "{\"results\": [{\"doc_id\": \"doc-06\", \"title\": \"Key handover\", \"snippet\": \"Key handover. The spare key deposit is \u00a340.00. Reference OP-822.\"}]}", "step": 2, "text": null, "tool": "search_documents"}
+{"args": null, "kind": "reply", "ref": null, "result": null, "step": 3, "text": "The spare key deposit under the key handover is \u00a340.00. Document ID used: doc-06.", "tool": null}
