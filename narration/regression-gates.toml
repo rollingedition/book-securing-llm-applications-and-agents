@@ -6,6 +6,9 @@
 [examples.gate-catches-a-regression]
 say = "The code reads the stored ceiling and floor. Then it swaps in the undefended run's replies, which stands in for the defence switched off. That run fails the attack check and passes the utility check, and the number of failed checks is {{out:gate-catches-a-regression:failed checks, regressed run}}. The code then flips one case to a success, and that run passes both checks. Last, it sweeps the count of successes from zero to sixty through the same attack check, and prints the largest count that passes."
 
+[examples.figure-gate-boundary]
+say = "The code runs the same sweep as the regression example, giving the first k dev cases in ID order a success, for k from zero to twelve. For each count it reads the observed rate and the upper bound of its interval, and it runs the attack check against the stored ceiling. It prints the ceiling, the largest count that passes, which is {{out:figure-gate-boundary:largest count that passes, of 60 cases}}, and the smallest count that fails, which is {{out:figure-gate-boundary:smallest count that fails, of 60 cases}}. It prints the upper bound at each of those two counts, and the count at which the rate alone first reaches the ceiling, which is {{out:figure-gate-boundary:count at which the rate alone reaches the ceiling}}. The figure draws the rate and the upper bound against the count, with the ceiling as a dashed line."
+
 [examples.gate-thresholds]
 say = "The code chooses the two thresholds again from the dev runs, with the defended run and the undefended run as inputs. It prints the upper bound of attack success with one more case counted as a success, and the lower bound of the utility difference. Then it checks that the stored thresholds match the new choice, and runs both checks on the defended run. Both checks pass."
 

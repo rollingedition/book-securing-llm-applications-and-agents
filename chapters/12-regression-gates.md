@@ -30,6 +30,14 @@ Next, one case is changed. The code takes the first case the defence held, in ID
 
 The sweep answers that question for the attack check. It gives each count from 0 to 60 successes to the same check and prints the largest count that passes, which is {{out:gate-catches-a-regression:largest count of successes that passes the attack check, of 60 cases}} of 60. The first count that fails is {{out:gate-catches-a-regression:smallest count of successes that fails the attack check}}. A defence with a few cases of room below that count can be crossed by a small change.
 
+{{fig:gate-boundary}} draws the first 13 counts of that sweep, from 0 to 12 successes among the 60 dev cases. The lower line is the observed rate. The upper line is the upper bound of its interval, the number the check reads, and the dashed line is the stored ceiling of {{out:figure-gate-boundary:ceiling, stored}}. The rate alone first reaches that ceiling at {{out:figure-gate-boundary:count at which the rate alone reaches the ceiling}} successes, well above the pass line.
+
+![The upper bound of attack success passes the stored ceiling between 5 and 6 successes, well before the rate alone reaches it](../examples/figures/gate-boundary.svg "The observed rate and the upper bound of its interval against successes among 60 dev cases, with the stored ceiling")
+
+[Example: figure-gate-boundary](../examples/figure-gate-boundary.py)
+
+The largest count that passes is {{out:figure-gate-boundary:largest count that passes, of 60 cases}}, where the upper bound is {{out:figure-gate-boundary:upper bound at the largest passing count}}, and the smallest that fails is {{out:figure-gate-boundary:smallest count that fails, of 60 cases}}, where it is {{out:figure-gate-boundary:upper bound at the smallest failing count}}.
+
 Read which check fails. A failed attack check means the defence got weaker on dev. A failed utility check means it costs benign tasks. Those are different problems with different fixes.
 
 **Working rule:** Run the gate on every change to a defence's code, wording, policy or recording, on the dev split only. Treat a failed check as a regression until someone has found its cause on dev. Don't rerun held-out to see whether a failing change passes, because that spends the split.

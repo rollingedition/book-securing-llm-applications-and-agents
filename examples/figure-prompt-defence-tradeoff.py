@@ -5,7 +5,7 @@ from lib import cases, runs, scorers, stats  # lib first: threads and seeds are 
 from lib.figures import ACCENT, INK, new_figure, save
 
 DEFENCES = ("prompt-warning", "prompt-delimiters", "prompt-datamark", "prompt-encode", "prompt-repeat")
-# Where each run's label sits, in data units, in empty space beside its point; the warning sits on the baseline's point.
+# Each label's place in data units, in empty space beside its point. The warning's point is the baseline's.
 LABELS = {"baseline": (16.0, 97.0), "prompt-warning": (16.0, 102.5), "prompt-delimiters": (13.0, 88.0),
           "prompt-datamark": (6.5, 76.0), "prompt-encode": (1.2, 57.0), "prompt-repeat": (8.5, 12.0)}
 
@@ -16,13 +16,13 @@ def run_dev(recording, variant=None):
     assert (len(benign), len(attacks)) == (15, 60), "the dev split has changed"  # the counts the prose names
     traces = runs.replay_tasks(recording, benign, variant=variant)
     case_traces = runs.replay_cases(recording, attacks, variant=variant)
-    utility = [1.0 if scorers.utility(t, traces[t.id]) else 0.0 for t in sorted(benign, key=lambda t: t.id)]
-    success = [1.0 if scorers.attack_success(c, case_traces[c.id]) else 0.0 for c in sorted(attacks, key=lambda c: c.id)]
+    utility = [float(scorers.utility(t, traces[t.id])) for t in sorted(benign, key=lambda t: t.id)]
+    success = [float(scorers.attack_success(c, case_traces[c.id])) for c in sorted(attacks, key=lambda c: c.id)]
     return utility, success
 
 
 def rate(label, flags):
-    """Print a rate with its counts and its bootstrap interval, as the paired example does; return them in points."""
+    """Print a rate with its counts and bootstrap interval, as the paired example does; return it in points, with the interval."""
     lo, hi = stats.bootstrap_mean(flags)  # the same interval the paired example prints, from the same seed
     print(f"{label}: {stats.pct(int(sum(flags)), len(flags))}")
     print(f"{label}, interval: {stats.interval_pct(lo, hi)}")
@@ -31,25 +31,21 @@ def rate(label, flags):
 
 def main():
     fig, ax = new_figure(height=3.8)
-    shown = {}  # each run's rates as drawn: attack success, then utility
+    rates = {}  # each run's rates as drawn, so the warning can be checked against the baseline
     for name in ("baseline",) + DEFENCES:
         recording, variant = ("baseline-dev", None) if name == "baseline" else (f"{name}-dev", name)
         utility, success = run_dev(recording, variant)
-        x = rate(f"{name}, attack success, 60 dev cases", success)
-        y = rate(f"{name}, utility, 15 dev benign tasks", utility)
-        shown[name] = (x[0], y[0])
+        x, y = rate(f"{name}, attack success, 60 dev cases", success), rate(f"{name}, utility, 15 dev benign tasks", utility)
+        rates[name] = (x[0], y[0])
         color = INK if name == "baseline" else ACCENT  # the baseline in ink, each defence in the accent
-        ring = name == "prompt-warning"  # on the baseline's point, so drawn as a ring it stays visible
-        ax.errorbar(x[0], y[0], xerr=[[x[0] - x[1]], [x[2] - x[0]]], yerr=[[y[0] - y[1]], [y[2] - y[0]]],
-                    fmt="o", color=color, markersize=9 if ring else 5, markerfacecolor="none" if ring else color,
-                    capsize=2, elinewidth=1)
+        ring = 9 if name == "prompt-warning" else 5  # the warning sits on the baseline's point, so its ring shows around it
+        ax.errorbar(x[0], y[0], xerr=[[x[0] - x[1]], [x[2] - x[0]]], yerr=[[y[0] - y[1]], [y[2] - y[0]]], fmt="o",
+                    color=color, markersize=ring, markerfacecolor="none" if ring > 5 else color, capsize=2, elinewidth=1)
         ax.annotate(name, (x[0], y[0]), xytext=LABELS[name], ha="left", va="center", color=color,
                     arrowprops=dict(arrowstyle="-", color=INK, linewidth=0.5, shrinkA=4, shrinkB=2))
-    assert shown["prompt-warning"] == shown["baseline"], "the warning's point is the baseline's"  # the prose says so
-    ax.set_xlabel("attack success, percent of 60 dev cases")
-    ax.set_ylabel("utility, percent of 15 dev benign tasks")
-    ax.set_xlim(-1, 25)
-    ax.set_ylim(0, 105)
+    assert rates["prompt-warning"] == rates["baseline"], "the warning's point is the baseline's"  # the prose says so
+    ax.set(xlabel="attack success, percent of 60 dev cases", ylabel="utility, percent of 15 dev benign tasks",
+           xlim=(-1, 25), ylim=(0, 105))
     save(fig, "prompt-defence-tradeoff")
 
 
