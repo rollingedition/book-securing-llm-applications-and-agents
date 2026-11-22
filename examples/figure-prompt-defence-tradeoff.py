@@ -7,6 +7,8 @@ from lib.figures import ACCENT, INK, new_figure, save
 # Label places in data units, beside their points. The warning's point is the baseline's, so one label names both.
 LABELS = {"baseline": (15.5, 88.0), "prompt-delimiters": (1.5, 101.0), "prompt-datamark": (6.5, 76.0),
           "prompt-encode": (1.2, 57.0), "prompt-repeat": (8.5, 12.0)}
+# Plain names, the words the chapter's prose uses. The run IDs stay in the printed lines and the bindings.
+NAMES = {"baseline": "undefended and warning", "prompt-delimiters": "delimiters", "prompt-datamark": "datamarking", "prompt-encode": "encoding", "prompt-repeat": "repeating the request"}
 
 
 def run_dev(name):
@@ -41,7 +43,7 @@ def main():
                                     markerfacecolor="none" if name == "prompt-warning" else color)
         if name == "prompt-delimiters": [a.set_linestyle("--") for a in (*caps, *bars)]  # its bars lie on the baseline's
         if name in LABELS:  # the warning has no label of its own: the baseline's label says it coincides
-            ax.annotate("baseline and warning" if name == "baseline" else name, (x[0], y[0]), xytext=LABELS[name][:2], ha="left", va="center", color=color,
+            ax.annotate(NAMES[name], (x[0], y[0]), xytext=LABELS[name][:2], ha="left", va="center", color=color,
                         arrowprops=dict(arrowstyle="-", color=INK, linewidth=0.5, shrinkA=4, shrinkB=2))
     assert run_dev("prompt-warning") == run_dev("baseline"), "the warning's point is the baseline's"  # the prose says so
     ax.set(xlabel="attack success, percent of 60 dev cases", ylabel="utility, percent of 15 dev benign tasks",

@@ -12,7 +12,7 @@ The primary defences for this risk are the deployment's registered tools, servic
 
 ## A classifier guard {#a-classifier-guard}
 
-An input detector is a classifier that scores a piece of text as injection or not, labelled input (detector) in this book. It reads a piece of text and returns one number, its estimate that the text is an injection. The book uses Protect AI's `deberta-v3-base-prompt-injection-v2`, at [its pinned commit](https://huggingface.co/protectai/deberta-v3-base-prompt-injection-v2/tree/90c9989b1a342275dd0d1a95aad283c04e075671), under Apache-2.0. The labels are 0 for safe and 1 for injection. The weights come from one file, `model.safetensors`. The repository also holds a training-arguments file, which the book never loads, because a file of that kind can carry code. [Chapter 10](#model-files) explains how the book chooses model files in general.
+An input detector, labelled input (detector) in this book, is a classifier that scores how likely a piece of text is to be an injection. It returns one number, that estimate. The book uses Protect AI's `deberta-v3-base-prompt-injection-v2`, at [its pinned commit](https://huggingface.co/protectai/deberta-v3-base-prompt-injection-v2/tree/90c9989b1a342275dd0d1a95aad283c04e075671), under Apache-2.0. The labels are 0 for safe and 1 for injection. The weights come from one file, `model.safetensors`. The repository also holds a training-arguments file, which the book never loads, because a file of that kind can carry code. [Chapter 10](#model-files) explains how the book chooses model files in general.
 
 The model card matters for what the numbers can mean. Four points from it bear on this chapter:
 

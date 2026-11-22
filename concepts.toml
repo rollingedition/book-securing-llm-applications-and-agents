@@ -110,7 +110,7 @@ section = "encoding"
 id = "input-detector"
 term = "input detector"
 aliases = ["injection detector"]
-definition = "An input detector is a classifier that scores a piece of text as injection or not, labelled input (detector) in this book."
+definition = "An input detector, labelled input (detector) in this book, is a classifier that scores how likely a piece of text is to be an injection."
 section = "a-classifier-guard"
 
 # Chapter 06
@@ -128,7 +128,7 @@ context = "ai-agents"
 id = "outbound-allowlist"
 term = "outbound allowlist"
 aliases = ["allowlist"]
-definition = "an outbound allowlist, a rule in the harness that, before each call runs, refuses any recipient or host it does not list"
+definition = "an outbound allowlist, a rule in the harness that, before each call runs, refuses a message to a recipient or a page fetch from a host it does not list"
 section = "an-outbound-allowlist"
 
 # Chapter 08

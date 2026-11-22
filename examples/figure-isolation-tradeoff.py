@@ -1,11 +1,11 @@
 """Each isolation design on the dev split as one point, attack success against utility, with 95% bootstrap intervals in both directions.
 The prose rests on the printed rates and intervals, which are the same numbers the points are drawn from."""
 from lib import cases, replay, report, runs, scorers, stats  # lib first: threads and seeds are fixed here
-from lib.figures import ACCENT, INK, MUTED, new_figure, save
+from lib.figures import ACCENT, INK, new_figure, save
 
 DESIGNS = ["design-dual-llm", "design-plan-then-execute", "design-taint"]  # sorted, as isolation-paired prints them
 # Each point's label as the chapter's table names it, its offset in points from the point, and its alignment, clear of the other bars.
-LABEL_AT = {"baseline": ("undefended", 38, 0, "left", "center"), "design-dual-llm": ("dual LLM", 4, -8, "left", "top"), "design-plan-then-execute": ("plan-then-execute", 30, 0, "left", "center"), "design-taint": ("taint labels", 30, 0, "left", "center")}
+LABEL_AT = {"baseline": ("undefended", 6, 5, "left", "bottom"), "design-dual-llm": ("dual LLM", 4, -8, "left", "top"), "design-plan-then-execute": ("plan-then-execute", 110, 0, "left", "center"), "design-taint": ("taint labels", 6, 5, "left", "bottom")}
 
 
 def scores(name, tasks, attacks):
@@ -37,14 +37,15 @@ def main():
         x, y = 100 * sum(success) / len(success), 100 * sum(utility) / len(utility)  # attack success, utility
         (a_lo[name], a_hi[name]), (u_lo[name], u_hi[name]) = interval(success), interval(utility)
         # The undefended run in ink, plan-then-execute in muted, dual LLM and taint in the accent: its bars stay apart from taint's, both at 6.7% utility.
-        color = {"baseline": INK, "design-plan-then-execute": MUTED}.get(name, ACCENT)
-        ax.errorbar(x, y, xerr=[[x - a_lo[name]], [a_hi[name] - x]], yerr=[[y - u_lo[name]], [u_hi[name] - y]], fmt="o", color=color, markersize=4, capsize=2, elinewidth=1)
+        color = INK if name == "baseline" else ACCENT  # the undefended run in ink, each design in the accent, as the prompt-defence figure does
+        _, caps, bars = ax.errorbar(x, y, xerr=[[x - a_lo[name]], [a_hi[name] - x]], yerr=[[y - u_lo[name]], [u_hi[name] - y]], fmt="o", color=color, markersize=4, capsize=2, elinewidth=1)
+        if name == "design-plan-then-execute": [a.set_linestyle("--") for a in (*caps, *bars)]  # its bar meets taint's lower cap
         text, dx, dy, ha, va = LABEL_AT[name]
         ax.annotate(text, (x, y), xytext=(dx, dy), textcoords="offset points", color=color, ha=ha, va=va)
     # The two claims the figure and its prose make, checked on the printed intervals.
     assert u_lo["design-dual-llm"] > max(u_hi["design-taint"], u_hi["design-plan-then-execute"])  # utility splits the runs
     assert all(a_lo[d] < a_hi["baseline"] and a_hi[d] > a_lo["baseline"] for d in DESIGNS)  # attack intervals overlap
-    ax.set(xlim=(0, 100), ylim=(0, 100), xlabel="attack success on 60 dev cases, %", ylabel="utility on 15 dev benign tasks, %")
+    ax.set(xlim=(-1, 25), ylim=(0, 105), xlabel="attack success, percent of 60 dev cases", ylabel="utility, percent of 15 dev benign tasks")
     save(fig, "isolation-tradeoff")
 
 

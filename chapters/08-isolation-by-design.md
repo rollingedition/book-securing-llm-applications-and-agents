@@ -139,13 +139,13 @@ Each design buys a lower attack success by giving up something the assistant use
 | Plan-then-execute | {{out:isolation-paired:utility, design-plan-then-execute, 15 benign tasks}} | {{out:isolation-paired:attack success, design-plan-then-execute, 60 cases}} | {{out:isolation-paired:held-out utility, design-plan-then-execute, 15 benign tasks}} | {{out:isolation-paired:held-out attack success, design-plan-then-execute, 60 cases}} |
 | Taint labels | {{out:isolation-paired:utility, design-taint, 15 benign tasks}} | {{out:isolation-paired:attack success, design-taint, 60 cases}} | {{out:isolation-paired:held-out utility, design-taint, 15 benign tasks}} | {{out:isolation-paired:held-out attack success, design-taint, 60 cases}} |
 
-The paired differences are computed per item, then bootstrapped, as [Evaluating LLM Applications, chapter 8](https://rollingedition.com/evaluating-llm-applications/s/paired-comparisons) describes.
+{{fig:isolation-tradeoff}} plots dev utility against attack success: undefended {{out:figure-isolation-tradeoff:baseline utility, 15 benign tasks}}, dual LLM {{out:figure-isolation-tradeoff:utility, design-dual-llm, 15 benign tasks}}, taint {{out:figure-isolation-tradeoff:utility, design-taint, 15 benign tasks}}, plan-then-execute {{out:figure-isolation-tradeoff:utility, design-plan-then-execute, 15 benign tasks}}. Utility splits them; attack success does not.
 
-{{fig:isolation-tradeoff}} plots utility against attack success on dev. Utility splits the runs: undefended {{out:figure-isolation-tradeoff:baseline utility, 15 benign tasks}}, dual LLM {{out:figure-isolation-tradeoff:utility, design-dual-llm, 15 benign tasks}}, taint {{out:figure-isolation-tradeoff:utility, design-taint, 15 benign tasks}}, plan-then-execute {{out:figure-isolation-tradeoff:utility, design-plan-then-execute, 15 benign tasks}}.
-
-![Utility, not attack success, splits the designs](../examples/figures/isolation-tradeoff.svg "Utility against attack success on dev, each run with 95% intervals both ways")
+![Only utility splits the designs](../examples/figures/isolation-tradeoff.svg "Each run's dev utility against its attack success, with 95% intervals")
 
 [Example: figure-isolation-tradeoff](../examples/figure-isolation-tradeoff.py)
+
+The paired differences are computed per item, then bootstrapped, as [Evaluating LLM Applications, chapter 8](https://rollingedition.com/evaluating-llm-applications/s/paired-comparisons) describes.
 
 The utility differences on dev are {{out:isolation-paired:utility difference from baseline, design-dual-llm}} for the dual LLM, {{out:isolation-paired:utility difference from baseline, design-plan-then-execute}} for plan-then-execute and {{out:isolation-paired:utility difference from baseline, design-taint}} for taint.
 

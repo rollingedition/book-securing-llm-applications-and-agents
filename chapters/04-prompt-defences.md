@@ -112,8 +112,6 @@ Encoding has the largest total, and most of it is the tool definitions. Those ar
 
 The token cost does not rank the defences the way the utility cost does. In this run the repeat is the cheapest in tokens, and it has the largest utility cost on dev. On held-out, encoding costs the most utility, a paired difference of {{out:prompt-defences-held-out:prompt-encode, paired difference in utility}} against the repeat's {{out:prompt-defences-held-out:prompt-repeat, paired difference in utility}}, and it is also the largest cost in tokens, measured on dev. A ranking from the tuned split can change on the held-out split, so a cost comparison needs both.
 
-These counts describe these prompts, this tokeniser and this set of short documents. Real tool results are longer, and a deployed model's tokeniser may split the same text differently. Count the tokens with the tokeniser of the model you deploy, on the prompts it will read, and not with the numbers printed here.
-
 {{fig:prompt-defence-tradeoff}} draws each run's attack success along the bottom and its utility up the side, so a defence that lowers attack success without costing utility sits toward the upper left. The undefended run, the baseline, is at {{out:figure-prompt-defence-tradeoff:baseline, attack success, 60 dev cases}} attack success and {{out:figure-prompt-defence-tradeoff:baseline, utility, 15 dev benign tasks}} utility. The warning's point is on top of it, since the two runs have the same counts. Each bar is that run's own 95% interval. The paired intervals in the sections above compare each defence with the baseline case by case, and they decide which differences this run shows.
 
 ![On the dev split, encoding alone stops every attack, and encoding and repeating the request give up the most benign tasks](../examples/figures/prompt-defence-tradeoff.svg "Each run's dev attack success against its dev utility, with 95% bootstrap intervals")
@@ -121,6 +119,8 @@ These counts describe these prompts, this tokeniser and this set of short docume
 [Example: figure-prompt-defence-tradeoff](../examples/figure-prompt-defence-tradeoff.py)
 
 The two whose paired intervals show a dev reduction, datamarking and encoding, both sit below the baseline's utility: encoding stops every attack, at {{out:figure-prompt-defence-tradeoff:prompt-encode, attack success, 60 dev cases}}, and keeps {{out:figure-prompt-defence-tradeoff:prompt-encode, utility, 15 dev benign tasks}} of the benign tasks. The repeat sits far below the rest, at {{out:figure-prompt-defence-tradeoff:prompt-repeat, utility, 15 dev benign tasks}}, with a bar from {{out:figure-prompt-defence-tradeoff:prompt-repeat, utility, 15 dev benign tasks, interval}} that 15 tasks make wide.
+
+These counts describe these prompts, this tokeniser and this set of short documents. Real tool results are longer, and a deployed model's tokeniser may split the same text differently. Count the tokens with the tokeniser of the model you deploy, on the prompts it will read, and not with the numbers printed here.
 
 **Working rule:** Count each defence's tokens with the deployed model's tokeniser, on the prompts it will read, and count the calls its run makes. Put each cost beside its benign and attack results. If two defences lower attack success by the same amount, keep the one that costs fewer benign tasks and fewer tokens.
 
