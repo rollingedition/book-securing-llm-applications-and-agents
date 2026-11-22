@@ -62,7 +62,7 @@ Datamarking also changes what an [input detector](#a-classifier-guard) reads. [C
 
 ### Encoding {#encoding}
 
-Encoding replaces each untrusted segment with the base64 encoding of its UTF-8 bytes. The system prompt says that tool output is base64 and is data, and that it must not be followed. Third-party tool definitions are untrusted too, so this variant encodes them as well. Encoding therefore changes two things at once, the tool results and the tool definitions, and the book's runs cannot tell the two apart. The model must decode the text before it can read it.
+Encoding replaces each untrusted segment with an encoded form, here the base64 encoding of its UTF-8 bytes. The system prompt says that tool output is base64 and is data, and that it must not be followed. Third-party tool definitions are untrusted too, so this variant encodes them as well. Encoding therefore changes two things at once, the tool results and the tool definitions, and the book's runs cannot tell the two apart. The model must decode the text before it can read it.
 
 [Hines et al.](https://arxiv.org/abs/2403.14720) report that encoding gave the lowest attack success of the three transforms, and that only the most capable models decode the text with high fidelity. GPT-3.5-Turbo's task performance suffered on encoded text in their experiments. Those were GPT-family models in 2024, not a 4B open-weight model, and their encoding did not change tool definitions, which this variant does. The book's encoded runs also lose utility, and they don't show why. Model size is one possible cause, and the runs do not separate it from encoding the tool results or from encoding the tool definitions. There is no encoded run on the 0.6B model, and no run that varies model size with encoding on.
 
@@ -120,7 +120,7 @@ These counts describe these prompts, this tokeniser and this set of short docume
 
 [Example: figure-prompt-defence-tradeoff](../examples/figure-prompt-defence-tradeoff.py)
 
-On dev, no defence reaches the upper left. The two whose paired intervals show a dev reduction, datamarking and encoding, both sit below the baseline's utility: encoding stops every attack, at {{out:figure-prompt-defence-tradeoff:prompt-encode, attack success, 60 dev cases}}, and keeps {{out:figure-prompt-defence-tradeoff:prompt-encode, utility, 15 dev benign tasks}} of the benign tasks. The repeat sits far below the rest, at {{out:figure-prompt-defence-tradeoff:prompt-repeat, utility, 15 dev benign tasks}}, with a bar from {{out:figure-prompt-defence-tradeoff:prompt-repeat, utility, 15 dev benign tasks, interval}} that 15 tasks make wide.
+The two whose paired intervals show a dev reduction, datamarking and encoding, both sit below the baseline's utility: encoding stops every attack, at {{out:figure-prompt-defence-tradeoff:prompt-encode, attack success, 60 dev cases}}, and keeps {{out:figure-prompt-defence-tradeoff:prompt-encode, utility, 15 dev benign tasks}} of the benign tasks. The repeat sits far below the rest, at {{out:figure-prompt-defence-tradeoff:prompt-repeat, utility, 15 dev benign tasks}}, with a bar from {{out:figure-prompt-defence-tradeoff:prompt-repeat, utility, 15 dev benign tasks, interval}} that 15 tasks make wide.
 
 **Working rule:** Count each defence's tokens with the deployed model's tokeniser, on the prompts it will read, and count the calls its run makes. Put each cost beside its benign and attack results. If two defences lower attack success by the same amount, keep the one that costs fewer benign tasks and fewer tokens.
 

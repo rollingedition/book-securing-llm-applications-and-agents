@@ -7,8 +7,6 @@ from lib.figures import ACCENT, INK, new_figure, save
 # Label places in data units, beside their points. The warning's point is the baseline's, so one label names both.
 LABELS = {"baseline": (15.5, 88.0), "prompt-delimiters": (1.5, 101.0), "prompt-datamark": (6.5, 76.0),
           "prompt-encode": (1.2, 57.0), "prompt-repeat": (8.5, 12.0)}
-# Delimiters has the baseline's utility, so its bars would lie on the baseline's. It is drawn 1.5 points higher, point and
-# bars together; the printed values are unshifted.
 
 
 def run_dev(name):
@@ -37,13 +35,13 @@ def main():
         utility, success = run_dev(name)
         x, y = rate(f"{name}, attack success, 60 dev cases", success), rate(f"{name}, utility, 15 dev benign tasks", utility)
         color = INK if name == "baseline" else ACCENT  # the baseline in ink, each defence in the accent
-        yn = y[0] + (1.5 if name == "prompt-delimiters" else 0.0)  # where the run is drawn; its interval moves with it
-        ax.errorbar(x[0], yn, xerr=[[x[0] - x[1]], [x[2] - x[0]]], yerr=[[y[0] - y[1]], [y[2] - y[0]]], fmt="o",
-                    color=color, capsize=2, elinewidth=0.9, zorder=3 if name == "baseline" else 2,
-                    markersize=9 if name == "prompt-warning" else 5,  # the warning's ring shows around the baseline's point
-                    markerfacecolor="none" if name == "prompt-warning" else color)
+        _, caps, bars = ax.errorbar(x[0], y[0], xerr=[[x[0] - x[1]], [x[2] - x[0]]], yerr=[[y[0] - y[1]], [y[2] - y[0]]], fmt="o",
+                                    color=color, capsize=2, elinewidth=0.9, zorder=3 if name == "baseline" else 2,
+                                    markersize=9 if name == "prompt-warning" else 5,  # the warning's ring shows around the baseline's point
+                                    markerfacecolor="none" if name == "prompt-warning" else color)
+        if name == "prompt-delimiters": [a.set_linestyle("--") for a in (*caps, *bars)]  # its bars lie on the baseline's
         if name in LABELS:  # the warning has no label of its own: the baseline's label says it coincides
-            ax.annotate("baseline and warning" if name == "baseline" else name, (x[0], yn), xytext=LABELS[name][:2], ha="left", va="center", color=color,
+            ax.annotate("baseline and warning" if name == "baseline" else name, (x[0], y[0]), xytext=LABELS[name][:2], ha="left", va="center", color=color,
                         arrowprops=dict(arrowstyle="-", color=INK, linewidth=0.5, shrinkA=4, shrinkB=2))
     assert run_dev("prompt-warning") == run_dev("baseline"), "the warning's point is the baseline's"  # the prose says so
     ax.set(xlabel="attack success, percent of 60 dev cases", ylabel="utility, percent of 15 dev benign tasks",
